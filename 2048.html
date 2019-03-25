@@ -1,0 +1,526 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<style>
+#div1{
+ margin:300px 600px;
+}
+td{text-align:center;
+ height:75px;
+ width:75px;
+ font-size:40px;
+}
+input{
+height:50px;
+width:50px;
+margin-left:30px
+}
+#div2{
+margin:0 760px;
+}
+#div2 input{
+height:40px;
+width:100px;
+background:pink;
+}
+#div3 input{
+height:40px;
+width:40px;
+background:pink;
+}
+#div3{
+margin:0 760px;
+}
+#i1{margin-left:120px;}
+#i4{margin-left:120px;}
+#i2{margin-left:69px;}
+#i3{margin-left:47px;}
+</style>
+ </head>
+ <body>
+ <div id="div2">
+  点击按钮开使游戏：<input type="button" value="小哥哥来玩吗？" onclick="begin()">
+ </div>
+ <div id="div3" style="display:none">
+   小哥哥你输了再玩一次吗？<input type="button" value="YES" onclick="restart()"><input type="button" value="NO" onclick="backbegin()">
+ </div>
+ <div id="div1" style="display:none">
+ <table border="1px" height="300px" width="300px">
+ 	<tr>
+ 		<td id="a1"></td>
+ 		<td id="a2"></td>
+ 		<td id="a3"></td>
+ 		<td id="a4"></td>
+ 	</tr>
+ 	<tr>
+ 		<td id="b1"></td>
+ 		<td id="b2"></td>
+ 		<td id="b3"></td>
+ 		<td id="b4"></td>
+ 	</tr>
+ 	<tr>
+ 		<td id="c1"></td>
+ 		<td id="c2"></td>
+ 		<td id="c3"></td>
+ 		<td id="c4"></td>
+ 	</tr>
+ 	<tr>
+ 		<td id="d1"></td>
+ 		<td id="d2"></td>
+ 		<td id="d3"></td>
+ 		<td id="d4"></td>
+ 	</tr>
+	<script>
+	var str=[a1,a2,a3,a4,b1,b2,b3,b4,c1,c2,c3,c4,d1,d2,d3,d4];
+    var str1=[2,4];
+	var i=Math.floor(Math.random()*16);
+	var j=Math.floor(Math.random()*2);
+	str[i].innerHTML=str1[j];
+	function begin(){
+	div2.style.display="none";
+	div1.style.display="block";
+	}
+	function restart(){
+	div3.style.display="none";
+	div1.style.display="block";
+	for(var q1=0;q1<16;q1++){
+	 str[q1].innerHTML="";
+	 }
+	var i=Math.floor(Math.random()*16);
+	var j=Math.floor(Math.random()*2);
+	str[i].innerHTML=str1[j];
+	}
+	function backbegin(){
+	div3.style.display="none";
+	div2.style.display="block";
+	for(var q1=0;q1<16;q1++){
+	 str[q1].innerHTML="";
+	 }
+	var i=Math.floor(Math.random()*16);
+	var j=Math.floor(Math.random()*2);
+	str[i].innerHTML=str1[j];
+	}
+	</script>
+ </table><br><br>
+ <div>
+  <input type="button"  value="↑" onclick="show1()" id="i1" ><br>
+  <input type="button"  value="←" onclick="show3()" id="i2">
+  <input type="button"  value="→" onclick="show4()" id="i3"><br>
+  <input type="button"  value="↓" onclick="show2()" id="i4">
+  </div>
+  <script>
+  function show1(){
+	var k1=[d1.innerHTML,c1.innerHTML,b1.innerHTML,a1.innerHTML];
+for(var i=0;i<k1.length;i++){
+if(k1[i]==""){ 
+  k1.splice(0,0,k1[i]);
+  k1.splice(i+1,1);
+}
+} if(k1[0]==k1[1]&&k1[1]==k1[2]&&k1[2]==k1[3]&&k1[1]!=""){k1[3]=k1[3]*1+k1[2]*1+k1[1]*1+k1[0]*1;k1[0]="";k1[1]="";k1[2]=""}
+ if(k1[0]==k1[1]&&k1[1]==k1[2]&&k1[1]!=""){k1[2]=k1[1]*1+k1[2]*1;k1[1]=k1[0];k1[0]="";}//
+ if(k1[0]==k1[1]&&k1[1]!=""){k1[1]=k1[1]*1+k1[0]*1;k1[0]="";}
+ if(k1[2]==k1[1]&&k1[2]==k1[3]&&k1[1]!=""){k1[3]=k1[3]*1+k1[2]*1;k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}//
+ if(k1[2]==k1[1]&&k1[1]!=""){k1[2]=k1[1]*1+k1[2]*1;k1[1]=k1[0];k1[0]="";}
+ if(k1[2]==k1[3]&&k1[3]==k1[4]&&k1[3]!=""){k1[4]=k1[3]*1+k1[4]*1;k1[3]=k1[2];k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}//
+ if(k1[2]==k1[3]&&k1[3]!=""){k1[3]=k1[3]*1+k1[2]*1;k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}
+ //if(k1[4]==k1[3]&&k1[3]!=""){k1[4]=k1[3]*1+k1[4]*1;k1[3]=k1[2];k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}
+    k1.reverse();
+    a1.innerHTML=k1[0];
+	b1.innerHTML=k1[1];
+    c1.innerHTML=k1[2];
+    d1.innerHTML=k1[3];
+ var k2=[d2.innerHTML,c2.innerHTML,b2.innerHTML,a2.innerHTML];
+for(var i=0;i<k2.length;i++){
+if(k2[i]==""){ 
+  k2.splice(0,0,k2[i]);
+  k2.splice(i+1,1);
+}
+}
+if(k2[0]==k2[1]&&k2[1]==k2[2]&&k2[2]==k2[3]&&k2[1]!=""){k2[3]=k2[3]*1+k2[2]*1+k2[1]*1+k2[0]*1;k2[0]="";k2[1]="";k2[2]=""}
+ if(k2[2]==k2[1]&&k2[1]==k2[0]&&k2[1]!=""){k2[2]=k2[1]*1+k2[2]*1;k2[1]=k2[0];k2[0]="";}//
+ if(k2[0]==k2[1]&&k2[1]!=""){k2[1]=k2[1]*1+k2[0]*1;k2[0]="";}
+ if(k2[2]==k2[3]&&k2[2]==k2[1]&&k2[3]!=""){k2[3]=k2[3]*1+k2[2]*1;k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}//
+ if(k2[2]==k2[1]&&k2[1]!=""){k2[2]=k2[1]*1+k2[2]*1;k2[1]=k2[0];k2[0]="";}
+ if(k2[4]==k2[3]&&k2[3]==k2[2]&&k2[3]!=""){k2[4]=k2[3]*1+k2[4]*1;k2[3]=k2[2];k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}//
+ if(k2[2]==k2[3]&&k2[3]!=""){k2[3]=k2[3]*1+k2[2]*1;k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}
+ //if(k2[4]==k2[3]&&k2[3]!=""){k2[4]=k2[3]*1+k2[4]*1;k2[3]=k2[2];k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}
+    k2.reverse();
+    a2.innerHTML=k2[0];
+	b2.innerHTML=k2[1];
+    c2.innerHTML=k2[2];
+    d2.innerHTML=k2[3];
+  var k3=[d3.innerHTML,c3.innerHTML,b3.innerHTML,a3.innerHTML];
+for(var i=0;i<k3.length;i++){
+if(k3[i]==""){ 
+  k3.splice(0,0,k3[i]);
+  k3.splice(i+1,1);
+}
+}
+if(k3[0]==k3[1]&&k3[1]==k3[2]&&k3[2]==k3[3]&&k3[1]!=""){k3[3]=k3[3]*1+k3[2]*1+k3[1]*1+k3[0]*1;k3[0]="";k3[1]="";k3[2]=""}
+ if(k3[2]==k3[1]&&k3[1]==k3[0]&&k3[1]!=""){k3[2]=k3[1]*1+k3[2]*1;k3[1]=k3[0];k3[0]="";}//
+ if(k3[0]==k3[1]&&k3[1]!=""){k3[1]=k3[1]*1+k3[0]*1;k3[0]="";}
+ if(k3[2]==k3[3]&&k3[2]==k3[1]&&k3[3]!=""){k3[3]=k3[3]*1+k3[2]*1;k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}//
+ if(k3[2]==k3[1]&&k3[1]!=""){k3[2]=k3[1]*1+k3[2]*1;k3[1]=k3[0];k3[0]="";}
+ if(k3[4]==k3[3]&&k3[3]==k3[2]&&k3[3]!=""){k3[4]=k3[3]*1+k3[4]*1;k3[3]=k3[2];k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}//
+ if(k3[2]==k3[3]&&k3[3]!=""){k3[3]=k3[3]*1+k3[2]*1;k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}
+ //if(k3[4]==k3[3]&&k3[3]!=""){k3[4]=k3[3]*1+k3[4]*1;k3[3]=k3[2];k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}
+    k3.reverse();
+    a3.innerHTML=k3[0];
+	b3.innerHTML=k3[1];
+    c3.innerHTML=k3[2];
+    d3.innerHTML=k3[3];  
+  var k4=[d4.innerHTML,c4.innerHTML,b4.innerHTML,a4.innerHTML];
+for(var i=0;i<k4.length;i++){
+  if(k4[i]==""){ 
+  k4.splice(0,0,k4[i]);
+  k4.splice(i+1,1);
+}
+} 
+ if(k4[0]==k4[1]&&k4[1]==k4[2]&&k4[2]==k4[3]&&k4[1]!=""){k4[3]=k4[3]*1+k4[2]*1+k4[1]*1+k4[0]*1;k4[0]="";k4[1]="";k4[2]=""}
+ if(k4[2]==k4[1]&&k4[1]==k4[0]&&k4[1]!=""){k4[2]=k4[1]*1+k4[2]*1;k4[1]=k4[0];k4[0]="";}//
+ if(k4[0]==k4[1]&&k4[1]!=""){k4[1]=k4[1]*1+k4[0]*1;k4[0]="";}
+ if(k4[2]==k4[3]&&k4[2]==k4[1]&&k4[3]!=""){k4[3]=k4[3]*1+k4[2]*1;k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}//
+ if(k4[2]==k4[1]&&k4[1]!=""){k4[2]=k4[1]*1+k4[2]*1;k4[1]=k4[0];k4[0]="";}
+ if(k4[4]==k4[3]&&k4[3]==k4[2]&&k4[3]!=""){k4[4]=k4[3]*1+k4[4]*1;k4[3]=k4[2];k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}//
+ if(k4[2]==k4[3]&&k4[3]!=""){k4[3]=k4[3]*1+k4[2]*1;k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}
+ //if(k4[4]==k4[3]&&k4[3]!=""){k4[4]=k4[3]*1+k4[4]*1;k4[3]=k4[2];k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}
+    k4.reverse();
+    a4.innerHTML=k4[0];
+	b4.innerHTML=k4[1];
+    c4.innerHTML=k4[2];
+    d4.innerHTML=k4[3];
+	var q2=0;
+	for(var q1=0;q1<16;q1++){
+	 if(str[q1].innerHTML==""){
+		 q2++; 
+	 }
+	}
+	if(q2==0){
+	div1.style.display="none";
+	div3.style.display="block";
+	return;
+	}
+	
+
+	
+   //////
+  while(true){
+  var c=Math.floor(Math.random()*16);
+  if(!str[c].innerHTML){
+   str[c].innerHTML=str1[Math.floor(Math.random()*2)];
+   break;
+  }
+  }
+  }
+////
+  function show2(){
+	  	  var k1=[a1.innerHTML,b1.innerHTML,c1.innerHTML,d1.innerHTML];
+for(var i=0;i<k1.length;i++){
+if(k1[i]==""){ 
+  k1.splice(0,0,k1[i]);
+  k1.splice(i+1,1);
+}
+}
+ if(k1[0]==k1[1]&&k1[1]==k1[2]&&k1[2]==k1[3]&&k1[1]!=""){k1[3]=k1[3]*1+k1[2]*1+k1[1]*1+k1[0]*1;k1[0]="";k1[1]="";k1[2]=""}
+ if(k1[2]==k1[1]&&k1[1]==k1[0]&&k1[1]!=""){k1[2]=k1[1]*1+k1[2]*1;k1[1]=k1[0];k1[0]="";}//
+ if(k1[0]==k1[1]&&k1[1]!=""){k1[1]=k1[1]*1+k1[0]*1;k1[0]="";}
+ if(k1[2]==k1[3]&&k1[2]==k1[1]&&k1[3]!=""){k1[3]=k1[3]*1+k1[2]*1;k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}//
+ if(k1[2]==k1[1]&&k1[1]!=""){k1[2]=k1[1]*1+k1[2]*1;k1[1]=k1[0];k1[0]="";}
+ if(k1[4]==k1[3]&&k1[2]==k1[3]&&k1[3]!=""){k1[4]=k1[3]*1+k1[4]*1;k1[3]=k1[2];k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}//
+ if(k1[2]==k1[3]&&k1[3]!=""){k1[3]=k1[3]*1+k1[2]*1;k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}
+ //if(k1[4]==k1[3]&&k1[3]!=""){k1[4]=k1[3]*1+k1[4]*1;k1[3]=k1[2];k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}
+    a1.innerHTML=k1[0];
+	b1.innerHTML=k1[1];
+    c1.innerHTML=k1[2];
+    d1.innerHTML=k1[3];
+ var k2=[a2.innerHTML,b2.innerHTML,c2.innerHTML,d2.innerHTML];
+for(var i=0;i<k2.length;i++){
+if(k2[i]==""){ 
+  k2.splice(0,0,k2[i]);
+  k2.splice(i+1,1);
+}
+}
+ if(k2[0]==k2[1]&&k2[1]==k2[2]&&k2[2]==k2[3]&&k2[1]!=""){k2[3]=k2[3]*1+k2[2]*1+k2[1]*1+k2[0]*1;k2[0]="";k2[1]="";k2[2]=""}
+ if(k2[2]==k2[1]&&k2[0]==k2[1]&&k2[1]!=""){k2[2]=k2[1]*1+k2[2]*1;k2[1]=k2[0];k2[0]="";}//
+ if(k2[0]==k2[1]&&k2[1]!=""){k2[1]=k2[1]*1+k2[0]*1;k2[0]="";}
+ if(k2[2]==k2[3]&&k2[2]==k2[1]&&k2[3]!=""){k2[3]=k2[3]*1+k2[2]*1;k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}//
+ if(k2[2]==k2[1]&&k2[1]!=""){k2[2]=k2[1]*1+k2[2]*1;k2[1]=k2[0];k2[0]="";}
+ if(k2[4]==k2[3]&&k2[2]==k2[3]&&k2[3]!=""){k2[4]=k2[3]*1+k2[4]*1;k2[3]=k2[2];k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}//
+ if(k2[2]==k2[3]&&k2[3]!=""){k2[3]=k2[3]*1+k2[2]*1;k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}
+ //if(k2[4]==k2[3]&&k2[3]!=""){k2[4]=k2[3]*1+k2[4]*1;k2[3]=k2[2];k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}
+    a2.innerHTML=k2[0];
+	b2.innerHTML=k2[1];
+    c2.innerHTML=k2[2];
+    d2.innerHTML=k2[3];
+  var k3=[a3.innerHTML,b3.innerHTML,c3.innerHTML,d3.innerHTML];
+for(var i=0;i<k3.length;i++){
+if(k3[i]==""){ 
+  k3.splice(0,0,k3[i]);
+  k3.splice(i+1,1);
+}
+}
+ if(k3[0]==k3[1]&&k3[1]==k3[2]&&k3[2]==k3[3]&&k3[1]!=""){k3[3]=k3[3]*1+k3[2]*1+k3[1]*1+k3[0]*1;k3[0]="";k3[1]="";k3[2]=""}
+ if(k3[2]==k3[1]&&k3[1]==k3[0]&&k3[1]!=""){k3[2]=k3[1]*1+k3[2]*1;k3[1]=k3[0];k3[0]="";}//
+ if(k3[0]==k3[1]&&k3[1]!=""){k3[1]=k3[1]*1+k3[0]*1;k3[0]="";}
+ if(k3[2]==k3[3]&&k3[2]==k3[1]&&k3[3]!=""){k3[3]=k3[3]*1+k3[2]*1;k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}//
+ if(k3[2]==k3[1]&&k3[1]!=""){k3[2]=k3[1]*1+k3[2]*1;k3[1]=k3[0];k3[0]="";}
+ if(k3[4]==k3[3]&&k3[3]==k3[2]&&k3[3]!=""){k3[4]=k3[3]*1+k3[4]*1;k3[3]=k3[2];k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}//
+ if(k3[2]==k3[3]&&k3[3]!=""){k3[3]=k3[3]*1+k3[2]*1;k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}
+ //if(k3[4]==k3[3]&&k3[3]!=""){k3[4]=k3[3]*1+k3[4]*1;k3[3]=k3[2];k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}
+   a3.innerHTML=k3[0];
+	b3.innerHTML=k3[1];
+    c3.innerHTML=k3[2];
+    d3.innerHTML=k3[3];  
+  var k4=[a4.innerHTML,b4.innerHTML,c4.innerHTML,d4.innerHTML];
+for(var i=0;i<k4.length;i++){
+  if(k4[i]==""){ 
+  k4.splice(0,0,k4[i]);
+  k4.splice(i+1,1);
+}
+} 
+if(k4[0]==k4[1]&&k4[1]==k4[2]&&k4[2]==k4[3]&&k4[1]!=""){k4[3]=k4[3]*1+k4[2]*1+k4[1]*1+k4[0]*1;k4[0]="";k4[1]="";k4[2]=""}
+ if(k4[2]==k4[1]&&k4[1]==k4[0]&&k4[1]!=""){k4[2]=k4[1]*1+k4[2]*1;k4[1]=k4[0];k4[0]="";}//
+ if(k4[0]==k4[1]&&k4[1]!=""){k4[1]=k4[1]*1+k4[0]*1;k4[0]="";}
+ if(k4[2]==k4[3]&&k4[2]==k4[1]&&k4[3]!=""){k4[3]=k4[3]*1+k4[2]*1;k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}//
+ if(k4[2]==k4[1]&&k4[1]!=""){k4[2]=k4[1]*1+k4[2]*1;k4[1]=k4[0];k4[0]="";}
+ if(k4[4]==k4[3]&&k4[3]==k4[2]&&k4[3]!=""){k4[4]=k4[3]*1+k4[4]*1;k4[3]=k4[2];k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}//
+ if(k4[2]==k4[3]&&k4[3]!=""){k4[3]=k4[3]*1+k4[2]*1;k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}
+ //if(k4[4]==k4[3]&&k4[3]!=""){k4[4]=k4[3]*1+k4[4]*1;k4[3]=k4[2];k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}
+    a4.innerHTML=k4[0];
+	b4.innerHTML=k4[1];
+    c4.innerHTML=k4[2];
+    d4.innerHTML=k4[3];
+	var q2=0;
+	for(var q1=0;q1<16;q1++){
+	 if(str[q1].innerHTML==""){
+		 q2++; 
+	 }
+	}
+	if(q2==0){
+	div1.style.display="none";
+	div3.style.display="block";
+	return;
+	}
+	
+
+
+	////
+  while(true){
+  var c=Math.floor(Math.random()*16);
+  if(!str[c].innerHTML){
+   str[c].innerHTML=str1[Math.floor(Math.random()*2)];
+   break;
+  }
+  }
+  }
+  function show3(){
+	  var k1=[a4.innerHTML,a3.innerHTML,a2.innerHTML,a1.innerHTML];
+for(var i=0;i<k1.length;i++){
+if(k1[i]==""){ 
+  k1.splice(0,0,k1[i]);
+  k1.splice(i+1,1);
+}
+}
+if(k1[0]==k1[1]&&k1[1]==k1[2]&&k1[2]==k1[3]&&k1[1]!=""){k1[3]=k1[3]*1+k1[2]*1+k1[1]*1+k1[0]*1;k1[0]="";k1[1]="";k1[2]=""}
+ if(k1[2]==k1[1]&&k1[1]==k1[0]&&k1[1]!=""){k1[2]=k1[1]*1+k1[2]*1;k1[1]=k1[0];k1[0]="";}//
+ if(k1[0]==k1[1]&&k1[1]!=""){k1[1]=k1[1]*1+k1[0]*1;k1[0]="";}
+ if(k1[2]==k1[3]&&k1[2]==k1[1]&&k1[3]!=""){k1[3]=k1[3]*1+k1[2]*1;k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}//
+ if(k1[2]==k1[1]&&k1[1]!=""){k1[2]=k1[1]*1+k1[2]*1;k1[1]=k1[0];k1[0]="";}
+ if(k1[4]==k1[3]&&k1[2]==k1[3]&&k1[3]!=""){k1[4]=k1[3]*1+k1[4]*1;k1[3]=k1[2];k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}//
+ if(k1[2]==k1[3]&&k1[3]!=""){k1[3]=k1[3]*1+k1[2]*1;k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}
+ if(k1[4]==k1[3]&&k1[3]!=""){k1[4]=k1[3]*1+k1[4]*1;k1[3]=k1[2];k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}
+   k1.reverse();
+    a1.innerHTML=k1[0];
+	a2.innerHTML=k1[1];
+    a3.innerHTML=k1[2];
+    a4.innerHTML=k1[3];
+ var k2=[b4.innerHTML,b3.innerHTML,b2.innerHTML,b1.innerHTML];
+for(var i=0;i<k2.length;i++){
+if(k2[i]==""){ 
+  k2.splice(0,0,k2[i]);
+  k2.splice(i+1,1);
+}
+}
+if(k2[0]==k2[1]&&k2[1]==k2[2]&&k2[2]==k2[3]&&k2[1]!=""){k2[3]=k2[3]*1+k2[2]*1+k2[1]*1+k2[0]*1;k2[0]="";k2[1]="";k2[2]=""}
+ if(k2[2]==k2[1]&&k2[0]==k2[1]&&k2[1]!=""){k2[2]=k2[1]*1+k2[2]*1;k2[1]=k2[0];k2[0]="";}//
+ if(k2[0]==k2[1]&&k2[1]!=""){k2[1]=k2[1]*1+k2[0]*1;k2[0]="";}
+ if(k2[2]==k2[3]&&k2[2]==k2[1]&&k2[3]!=""){k2[3]=k2[3]*1+k2[2]*1;k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}//
+ if(k2[2]==k2[1]&&k2[1]!=""){k2[2]=k2[1]*1+k2[2]*1;k2[1]=k2[0];k2[0]="";}
+ if(k2[4]==k2[3]&&k2[2]==k2[3]&&k2[3]!=""){k2[4]=k2[3]*1+k2[4]*1;k2[3]=k2[2];k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}//
+ if(k2[2]==k2[3]&&k2[3]!=""){k2[3]=k2[3]*1+k2[2]*1;k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}
+ if(k2[4]==k2[3]&&k2[3]!=""){k2[4]=k2[3]*1+k2[4]*1;k2[3]=k2[2];k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}
+    k2.reverse();
+    b1.innerHTML=k2[0];
+	b2.innerHTML=k2[1];
+    b3.innerHTML=k2[2];
+    b4.innerHTML=k2[3];
+  var k3=[c4.innerHTML,c3.innerHTML,c2.innerHTML,c1.innerHTML];
+for(var i=0;i<k3.length;i++){
+if(k3[i]==""){ 
+  k3.splice(0,0,k3[i]);
+  k3.splice(i+1,1);
+}
+}
+if(k3[0]==k3[1]&&k3[1]==k3[2]&&k3[2]==k3[3]&&k3[1]!=""){k3[3]=k3[3]*1+k3[2]*1+k3[1]*1+k3[0]*1;k3[0]="";k3[1]="";k3[2]=""}
+ if(k3[2]==k3[1]&&k3[1]==k3[0]&&k3[1]!=""){k3[2]=k3[1]*1+k3[2]*1;k3[1]=k3[0];k3[0]="";}//
+ if(k3[0]==k3[1]&&k3[1]!=""){k3[1]=k3[1]*1+k3[0]*1;k3[0]="";}
+ if(k3[2]==k3[3]&&k3[2]==k3[1]&&k3[3]!=""){k3[3]=k3[3]*1+k3[2]*1;k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}//
+ if(k3[2]==k3[1]&&k3[1]!=""){k3[2]=k3[1]*1+k3[2]*1;k3[1]=k3[0];k3[0]="";}
+ if(k3[4]==k3[3]&&k3[3]==k3[2]&&k3[3]!=""){k3[4]=k3[3]*1+k3[4]*1;k3[3]=k3[2];k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}//
+ if(k3[2]==k3[3]&&k3[3]!=""){k3[3]=k3[3]*1+k3[2]*1;k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}
+ if(k3[4]==k3[3]&&k3[3]!=""){k3[4]=k3[3]*1+k3[4]*1;k3[3]=k3[2];k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}
+    k3.reverse();
+    c1.innerHTML=k3[0];
+	c2.innerHTML=k3[1];
+    c3.innerHTML=k3[2];
+    c4.innerHTML=k3[3];  
+  var k4=[d4.innerHTML,d3.innerHTML,d2.innerHTML,d1.innerHTML];
+for(var i=0;i<k4.length;i++){
+  if(k4[i]==""){ 
+  k4.splice(0,0,k4[i]);
+  k4.splice(i+1,1);
+}
+} 
+if(k4[0]==k4[1]&&k4[1]==k4[2]&&k4[2]==k4[3]&&k4[1]!=""){k4[3]=k4[3]*1+k4[2]*1+k4[1]*1+k4[0]*1;k4[0]="";k4[1]="";k4[2]=""}
+ if(k4[2]==k4[1]&&k4[1]==k4[0]&&k4[1]!=""){k4[2]=k4[1]*1+k4[2]*1;k4[1]=k4[0];k4[0]="";}//
+ if(k4[0]==k4[1]&&k4[1]!=""){k4[1]=k4[1]*1+k4[0]*1;k4[0]="";}
+ if(k4[2]==k4[3]&&k4[2]==k4[1]&&k4[3]!=""){k4[3]=k4[3]*1+k4[2]*1;k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}//
+ if(k4[2]==k4[1]&&k4[1]!=""){k4[2]=k4[1]*1+k4[2]*1;k4[1]=k4[0];k4[0]="";}
+ if(k4[4]==k4[3]&&k4[3]==k4[2]&&k4[3]!=""){k4[4]=k4[3]*1+k4[4]*1;k4[3]=k4[2];k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}//
+ if(k4[2]==k4[3]&&k4[3]!=""){k4[3]=k4[3]*1+k4[2]*1;k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}
+ if(k4[4]==k4[3]&&k4[3]!=""){k4[4]=k4[3]*1+k4[4]*1;k4[3]=k4[2];k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}
+    k4.reverse();
+    d1.innerHTML=k4[0];
+	d2.innerHTML=k4[1];
+    d3.innerHTML=k4[2];
+    d4.innerHTML=k4[3];
+	var q2=0;
+	for(var q1=0;q1<16;q1++){
+	 if(str[q1].innerHTML==""){
+		 q2++; 
+	 }
+	}
+	if(q2==0){
+	div1.style.display="none";
+	div3.style.display="block";
+	return;
+	}
+	
+//////
+  while(true){
+  var c=Math.floor(Math.random()*16);
+  if(!str[c].innerHTML){
+   str[c].innerHTML=str1[Math.floor(Math.random()*2)];
+   break;
+  }
+  }
+  }
+  function show4(){
+	  var k1=[a1.innerHTML,a2.innerHTML,a3.innerHTML,a4.innerHTML];
+for(var i=0;i<k1.length;i++){
+if(k1[i]==""){ 
+  k1.splice(0,0,k1[i]);
+  k1.splice(i+1,1);
+}
+}
+if(k1[0]==k1[1]&&k1[1]==k1[2]&&k1[2]==k1[3]&&k1[1]!=""){k1[3]=k1[3]*1+k1[2]*1+k1[1]*1+k1[0]*1;k1[0]="";k1[1]="";k1[2]=""}
+ if(k1[2]==k1[1]&&k1[1]==k1[0]&&k1[1]!=""){k1[2]=k1[1]*1+k1[2]*1;k1[1]=k1[0];k1[0]="";}//
+ if(k1[0]==k1[1]&&k1[1]!=""){k1[1]=k1[1]*1+k1[0]*1;k1[0]="";}
+ if(k1[2]==k1[3]&&k1[2]==k1[1]&&k1[3]!=""){k1[3]=k1[3]*1+k1[2]*1;k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}//
+ if(k1[2]==k1[1]&&k1[1]!=""){k1[2]=k1[1]*1+k1[2]*1;k1[1]=k1[0];k1[0]="";}
+ if(k1[4]==k1[3]&&k1[2]==k1[3]&&k1[3]!=""){k1[4]=k1[3]*1+k1[4]*1;k1[3]=k1[2];k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}//
+ if(k1[2]==k1[3]&&k1[3]!=""){k1[3]=k1[3]*1+k1[2]*1;k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}
+ if(k1[4]==k1[3]&&k1[3]!=""){k1[4]=k1[3]*1+k1[4]*1;k1[3]=k1[2];k1[2]=k1[1];k1[1]=k1[0];k1[0]="";}
+    a1.innerHTML=k1[0];
+	a2.innerHTML=k1[1];
+    a3.innerHTML=k1[2];
+    a4.innerHTML=k1[3];
+ var k2=[b1.innerHTML,b2.innerHTML,b3.innerHTML,b4.innerHTML];
+for(var i=0;i<k2.length;i++){
+if(k2[i]==""){ 
+  k2.splice(0,0,k2[i]);
+  k2.splice(i+1,1);
+}
+}
+if(k2[0]==k2[1]&&k2[1]==k2[2]&&k2[2]==k2[3]&&k2[1]!=""){k2[3]=k2[3]*1+k2[2]*1+k2[1]*1+k2[0]*1;k2[0]="";k2[1]="";k2[2]=""}
+ if(k2[2]==k2[1]&&k2[0]==k2[1]&&k2[1]!=""){k2[2]=k2[1]*1+k2[2]*1;k2[1]=k2[0];k2[0]="";}//
+ if(k2[0]==k2[1]&&k2[1]!=""){k2[1]=k2[1]*1+k2[0]*1;k2[0]="";}
+ if(k2[2]==k2[3]&&k2[2]==k2[1]&&k2[3]!=""){k2[3]=k2[3]*1+k2[2]*1;k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}//
+ if(k2[2]==k2[1]&&k2[1]!=""){k2[2]=k2[1]*1+k2[2]*1;k2[1]=k2[0];k2[0]="";}
+ if(k2[4]==k2[3]&&k2[2]==k2[3]&&k2[3]!=""){k2[4]=k2[3]*1+k2[4]*1;k2[3]=k2[2];k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}//
+ if(k2[2]==k2[3]&&k2[3]!=""){k2[3]=k2[3]*1+k2[2]*1;k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}
+ if(k2[4]==k2[3]&&k2[3]!=""){k2[4]=k2[3]*1+k2[4]*1;k2[3]=k2[2];k2[2]=k2[1];k2[1]=k2[0];k2[0]="";}
+    b1.innerHTML=k2[0];
+	b2.innerHTML=k2[1];
+    b3.innerHTML=k2[2];
+    b4.innerHTML=k2[3];
+  var k3=[c1.innerHTML,c2.innerHTML,c3.innerHTML,c4.innerHTML];
+for(var i=0;i<k3.length;i++){
+if(k3[i]==""){ 
+  k3.splice(0,0,k3[i]);
+  k3.splice(i+1,1);
+}
+}
+if(k3[0]==k3[1]&&k3[1]==k3[2]&&k3[2]==k3[3]&&k3[1]!=""){k3[3]=k3[3]*1+k3[2]*1+k3[1]*1+k3[0]*1;k3[0]="";k3[1]="";k3[2]=""}
+ if(k3[2]==k3[1]&&k3[1]==k3[0]&&k3[1]!=""){k3[2]=k3[1]*1+k3[2]*1;k3[1]=k3[0];k3[0]="";}//
+ if(k3[0]==k3[1]&&k3[1]!=""){k3[1]=k3[1]*1+k3[0]*1;k3[0]="";}
+ if(k3[2]==k3[3]&&k3[2]==k3[1]&&k3[3]!=""){k3[3]=k3[3]*1+k3[2]*1;k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}//
+ if(k3[2]==k3[1]&&k3[1]!=""){k3[2]=k3[1]*1+k3[2]*1;k3[1]=k3[0];k3[0]="";}
+ if(k3[4]==k3[3]&&k3[3]==k3[2]&&k3[3]!=""){k3[4]=k3[3]*1+k3[4]*1;k3[3]=k3[2];k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}//
+ if(k3[2]==k3[3]&&k3[3]!=""){k3[3]=k3[3]*1+k3[2]*1;k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}
+ if(k3[4]==k3[3]&&k3[3]!=""){k3[4]=k3[3]*1+k3[4]*1;k3[3]=k3[2];k3[2]=k3[1];k3[1]=k3[0];k3[0]="";}
+    c1.innerHTML=k3[0];
+	c2.innerHTML=k3[1];
+    c3.innerHTML=k3[2];
+    c4.innerHTML=k3[3];  
+  var k4=[d1.innerHTML,d2.innerHTML,d3.innerHTML,d4.innerHTML];
+for(var i=0;i<k4.length;i++){
+  if(k4[i]==""){ 
+  k4.splice(0,0,k4[i]);
+  k4.splice(i+1,1);
+}
+} 
+if(k4[0]==k4[1]&&k4[1]==k4[2]&&k4[2]==k4[3]&&k4[1]!=""){k4[3]=k4[3]*1+k4[2]*1+k4[1]*1+k4[0]*1;k4[0]="";k4[1]="";k4[2]=""}
+ if(k4[2]==k4[1]&&k4[1]==k4[0]&&k4[1]!=""){k4[2]=k4[1]*1+k4[2]*1;k4[1]=k4[0];k4[0]="";}//
+ if(k4[0]==k4[1]&&k4[1]!=""){k4[1]=k4[1]*1+k4[0]*1;k4[0]="";}
+ if(k4[2]==k4[3]&&k4[2]==k4[1]&&k4[3]!=""){k4[3]=k4[3]*1+k4[2]*1;k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}//
+ if(k4[2]==k4[1]&&k4[1]!=""){k4[2]=k4[1]*1+k4[2]*1;k4[1]=k4[0];k4[0]="";}
+ if(k4[4]==k4[3]&&k4[3]==k4[2]&&k4[3]!=""){k4[4]=k4[3]*1+k4[4]*1;k4[3]=k4[2];k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}//
+ if(k4[2]==k4[3]&&k4[3]!=""){k4[3]=k4[3]*1+k4[2]*1;k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}
+ if(k4[4]==k4[3]&&k4[3]!=""){k4[4]=k4[3]*1+k4[4]*1;k4[3]=k4[2];k4[2]=k4[1];k4[1]=k4[0];k4[0]="";}
+    d1.innerHTML=k4[0];
+	d2.innerHTML=k4[1];
+    d3.innerHTML=k4[2];
+    d4.innerHTML=k4[3]; 
+		var q2=0;
+	for(var q1=0;q1<16;q1++){
+	 if(str[q1].innerHTML==""){
+		 q2++; 
+	 }
+	}
+	if(q2==0){
+	div1.style.display="none";
+	div3.style.display="block";
+	return;
+	}
+	
+////
+  while(true){
+  var c=Math.floor(Math.random()*16);
+  if(!str[c].innerHTML){
+   str[c].innerHTML=str1[Math.floor(Math.random()*2)];
+   break;
+  }
+  }
+  }
+  </script>
+ </div>
+ </div>
+  
+ </body>
+</html>
+
+
+ 

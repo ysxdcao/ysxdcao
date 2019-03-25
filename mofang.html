@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:98px;height: 98px;
+        }
+    body>div>div>div{
+        position: absolute;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(0deg);
+        transform-origin: 50px 50px -50px;
+    }
+    body>div>div>div>div{
+        position: absolute;
+        border-top:1px solid white;
+        border-left:1px solid white;
+    }
+    .left{
+        background-color:green ;
+        left:-100px ;
+        transform-origin: right;
+        transform: rotateY(-90deg)
+    }
+    .center{
+        background-color:blue ;
+    }
+    .right{
+        background-color:red ;
+        left: 100px;
+        transform-origin:left ;
+        transform: rotateY(90deg)
+    }
+    .top{
+        background-color:gray ;
+        top:-100px ;
+        transform-origin: bottom;
+        transform: rotateX(90deg)
+    }
+    .bottom{
+        background-color: purple;
+        top:100px ;
+        transform-origin:top ;
+        transform: rotateX(-90deg)
+    }
+    .center-bottom{
+        background-color: yellow;
+        transform: translateZ(-100px);
+    }
+    .abc{
+        width: 300px;height: 300px;
+        margin:300px auto;
+        position: relative;
+        transform-style: preserve-3d;
+        transform-origin: 50% 50% -150px;
+        transform: rotateX(10deg) rotateY(30deg);
+    }
+    .a2,.b2,.c2{
+        left:100px;
+    }
+    .a3,.b3,.c3{
+        left:200px;
+
+    }
+    .a4,.b4,.c4{
+        top: 100px;
+    }
+    .a5,.b5,.c5{
+        top: 100px ;
+        left:100px
+    }
+    .a6,.b6,.c6{
+        top: 100px;
+        left: 200px;
+    }
+    .a7,.b7,.c7{
+        top: 200px ;
+
+    }
+    .a8,.b8,.c8{
+        top: 200px;
+        left: 100px;
+    }
+    .a9,.b9,.c9{
+        top: 200px;
+        left :200px;
+
+    }
+  .a7,.a8,.a9,.b7,.b8,.b9,.c7,.c8,.c9{
+      border-bottom: 1px solid white;
+  }
+  .a3,.a6,.a9,.b3,.b6,.b9,.c3,.c6,.c9{
+      border-right: 1px solid white;
+  }
+
+.x1,.x2,.x3{
+        width: 300px;height: 300px;
+        position: absolute;
+        transition: 2s;
+        transform-style: preserve-3d;
+        transform-origin: 50% 50% -50px;
+        transform:rotateZ(0deg);
+}
+.x2{
+    transform: translateZ(-100px);
+}
+.x3{
+    transform: translateZ(-200px);
+}
+    </style>
+</head>
+<body>
+ <div class="abc">
+<div class="x1">
+    <div class="a1 z1">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center-bottom"></div>
+    </div>
+    <div class="a2">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center-bottom"></div>
+    </div>
+    <div class="a3">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center-bottom"></div>
+    </div>
+    <div class="a4 z1">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center-bottom"></div>
+    </div>
+    <div class="a5">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center-bottom"></div>
+    </div>
+    <div class="a6">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center-bottom"></div>
+    </div>
+    <div class="a7 z1">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center-bottom"></div>
+    </div>
+    <div class="a8">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center-bottom"></div>
+    </div>
+    <div class="a9 ">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center-bottom"></div>
+    </div>
+</div>
+<div class="x2">
+    <div class="b1 z1">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="center-bottom"></div>
+        </div>
+        <div class="b2">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="center-bottom"></div>
+        </div>
+        <div class="b3">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="center-bottom"></div>
+        </div>
+        <div class="b4 z1">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="center-bottom"></div>
+        </div>
+        <div class="b5">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="center-bottom"></div>
+        </div>
+        <div class="b6">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="center-bottom"></div>
+        </div>
+        <div class="b7 z1">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="center-bottom"></div>
+        </div>
+        <div class="b8">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="center-bottom"></div>
+        </div>
+        <div class="b9">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="center-bottom"></div>
+        </div>
+    </div>
+    <div class="x3">
+        <div class="c1 z1">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+                <div class="center-bottom"></div>
+            </div>
+            <div class="c2">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+                <div class="center-bottom"></div>
+            </div>
+            <div class="c3">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+                <div class="center-bottom"></div>
+            </div>
+            <div class="c4 z1">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+                <div class="center-bottom"></div>
+            </div>
+            <div class="c5">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+                <div class="center-bottom"></div>
+            </div>
+            <div class="c6">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+                <div class="center-bottom"></div>
+            </div>
+            <div class="c7 z1">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+                <div class="center-bottom"></div>
+            </div>
+            <div class="c8">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+                <div class="center-bottom"></div>
+            </div>
+            <div class="c9">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+                <div class="center-bottom"></div>
+            </div>
+        </div> 
+</div>
+<input type="button" onclick="show()" value="dianwo">
+<input type="button" onclick="show1()"value="hengxiang">
+<input type="button" onclick="show2()"value=1111>
+<script>
+    var j=1;
+    var i=0;
+    var elems=document.querySelector("div>.x1")
+    var elem=document.querySelectorAll(" body>div>div>div");
+    var father=document.querySelector(".abc");
+    var z1=document.querySelectorAll(" body>div>div>.z1");
+    var x1=document.querySelectorAll(".abc>.x1>div");
+    function show(){
+    elems.style.cssText=`transition:2s;transform:rotateZ(${j*90}deg);`
+j++;
+i++;
+if(i==5) i=1;
+    }
+    function show1(){
+        //elems.transition='0s;'
+        elems.style.cssText=`transition:0s;transform:rotateZ(0deg);`
+      for( els of elem){
+        els.style.cssText=`transform:rotateY(${-90}deg);`
+   } 
+       father.style.cssText=`transform:rotateX(10deg) rotateY(120deg) ; `
+       if(i==2){
+       for(z of z1){
+        z.style.cssText=`transform:rotateX(${-180}deg) rotateY(-90deg); `
+        i=0;
+       }
+    }
+    if(i==1){
+        for(z of z1){
+         z.style.cssText=`transform:rotateZ(${90}deg) rotateX(${-90}deg); `
+         i=0;
+        }
+     }
+     if(i==3){
+        for(z of z1){
+         z.style.cssText=`transform:rotateZ(${-90}deg) rotateX(${90}deg); `
+         i=0;
+        }
+     }
+       j=1;
+      
+       
+    }
+    function show2(){
+        elems.style.cssText=`transition:0s;transform:rotateZ(0deg);`     
+
+    }
+</script>
+</body>
+</html>

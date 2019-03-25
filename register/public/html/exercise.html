@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hello world</title>
+    <link rel="stylesheet" href="../css/01.css">
+</head>
+<body onload="yzm1()">
+    <div id="div-max">
+        <div id="div-top">
+            <ul>
+                <li><a href="javascript:;" style="color:#336c6c">手机注册</a></li>
+                <li><a href="javascript:;">邮箱注册</a></li>
+            </ul>
+        </div>
+        <div id="div-center">
+            <input type="text" placeholder="手机号" id="phone"><br>
+            <input type="password" placeholder="密码" id="pwd1" maxlength="16"><br>
+            <input type="password" placeholder="确认密码" id="pwd2" maxlength="16">
+        </div>
+        <div id="div-bottom">
+            <input type="text" id="yzm" placeholder="验证码" ><a href="javascript:yzm1()" id="yzmk"></a> <a href="javascript:yzm1()" id="yzmh">看不清楚？换一个</a> <br> 
+            <input type="text" id="dtm" placeholder="动态码"><a href="javascript:;" id="hqdtm">获取动态码</a><br>
+            <a href="javascript:zxing()" id="login">注册</a>
+            <input type="checkbox" id="gxuan">
+            <ul>
+                <li>我已阅读并同意<a href="javascript:;" style="color:red">《用户注册协议》</a></li>
+                <li>已有账号？<a href="javascript:;" style="color:#336c6c">立即登入</a></li>
+            </ul>
+            <a href="javascript:;" id="tishi1">这是提示框</a>
+        </div>
+    </div>
+    <script src="../js/01.js"></script>
+</body>
+</html>
