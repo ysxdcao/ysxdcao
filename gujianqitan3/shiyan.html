@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            height: 3000px;
+            overflow: hidden;
+        }
+       body>div{
+         width: 100%;height:1000px;
+         transition: 0.3s;
+         position: absolute;
+         top:0;
+        }
+        body>div>div{
+            width: 100%;height:1000px;
+        }
+        .d1{
+            background: yellow;
+        }
+        .d2{
+            background: green;
+        }
+        .d3{
+            background: blue;
+        }
+        ul{
+            position: absolute;
+        }
+        ul>li{
+            color:white;
+            margin-bottom: 10px;
+        }
+
+          .active{
+            color:black; 
+          }
+       
+    </style>
+</head>
+<body>
+    <div class="div1">
+            <div class="d1"></div>
+            <div class="d2"></div>
+            <div class="d3"></div>
+    </div>
+    
+    <ul>
+        <li class="active">黄</li>
+        <li>绿</li>
+        <li>蓝</li>
+    </ul>
+    <script>
+        var j=0;
+           var arr=["0","-1000px","-2000px"];
+           var li1=document.querySelectorAll("ul>li");
+           var div1=document.querySelector(".div1");
+           window.onmousewheel=function(e){
+              e=e||window.event;
+              if(e.wheelDelta>0){
+                j--;
+                if(j==-1) j=0  
+                div1.style.top=`${-1000*j}px`;
+                for(a of li1){
+                    a.removeAttribute("class");
+                }
+                li1[j].setAttribute("class",`active`);    
+              }
+              else{  
+                j++; 
+                if(j==3) j=2;
+                div1.style.top=`${-1000*j}px`;
+                for(a of li1){
+                    a.removeAttribute("class");
+                }
+                li1[j].setAttribute("class",`active`); 
+              }
+           }
+            li1.forEach(function(elem,i){
+                elem.onmouseover=function(){
+                    console.log(3);
+                    for(a of li1){
+                        a.removeAttribute("class");
+                    }
+                    li1[i].setAttribute("class",`active`);
+                    div1.style.top=arr[i];
+                    j=i;
+                }
+            })
+              console.log(e.wheelDelta);
+             // console.log(e.detail);
+        
+        
+            
+    </script>
+</body>
+</html>

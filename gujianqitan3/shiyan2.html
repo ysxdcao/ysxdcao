@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top:0;
+        }
+        .kuang{
+            width: 500px;
+            height: 800px;
+            border: 2px solid red;
+            position: relative;
+        }
+        .kuang>.hualun{
+            width: 6px;
+            height: 50px;
+            background: purple;
+            position: absolute;
+            right: -3px;
+            top:0;
+            display:none;
+        }
+        .kuang>.words{
+            width: 500px;
+            height: 800px;
+            position: absolute;
+            top:0;
+            overflow: hidden;
+        }
+        .kuang>.words>div{
+            width: 500px;
+            height: 1550px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="kuang">
+        <div class="hualun">
+        </div>
+        <div class="words">
+            <div>
+                ciendis illo! Vitae, iusto! Ad alias nobis nihil vel totam quos, voluptates provident aliquid? Beatae placeat facilis minima est doloribus!
+                Obcaecati placeat sequi magnam perspiciatis facere praesentium voluptate, quibusdam iure dolor magni nesciunt, debitis aut cupiditate! Voluptatum repellat quisquam ullam aspernatur ad? Iure quaerat eos aliquam rem laborum fuga voluptatum.
+                Ullam sint maiores officiis? Alias quidem corrupti vel nam ad, doloribus ut iure deleniti, aliquam repellendus odio magni molestias tempore reprehenderit hic dicta iusto commodi accusantium. Expedita, obcaecati. Minus, non.
+                Rem nostrum error nisi assumenda enim consequuntur fuga doloremque ratione laboriosam labore, maiores ad, magni aperiam cum optio numquam provident illo doloribus unde. Commodi laudantium a nisi voluptas! Natus, libero?
+                Omnis quo, dolore libero doloremque ducimus possimus vero ipsa nulla veritatis quae repellat quibusdam minus rem deleniti voluptatibus facilis dignissimos corporis, earum ratione reprehenderit. Ipsa omnis neque assumenda error quasi?
+                Ipsam esse excepturi, exercitationem, libero quaerat sit mollitia aut officia explicabo, laborum saepe laboriosam? Sint autem sed porro fugiat vel tempore laboriosam harum possimus! Illum ea minus explicabo eaque suscipit!
+                Aspernatur, eaque? Ut nam obcaecati corrupti similique repellendus sit ea officia quam, fugit error, nulla, facere corporis illum ratione sint distinctio nobis deserunt. Suscipit, magni repellendus repellat corporis consequ
+                Doloru
+                Fugiat ipsam ipsum libero ratione cupiditate corporis voluptate atque at! Sed ipsam labore perferendis, sequi quasi necessitatibus quidem soluta debitis mollitia maxime eaque, doloremque quia id nobis numquam deleniti similique!
+                Fuga doloribus beatae est impedit itaque nulla vel aliquid. Voluptatibus molestiae dicta deserunt voluptatum a, minus perspiciatis vel modi, iste esse possimus rem consequuntur quam, doloremque fugit rerum culpa omnis.
+                Porro perferendis exercitationem nam aspernatur velit. Id voluptatibus doloremque reprehenderit, vel omnis mollitia provident quidem sapiente qui fuga eligendi nostrum possimus dolores expedita ab, repellendus velit ducimus explicabo eius quos.
+                Quia, officiis minus repellat dolor animi error reiciendis facere expedita quam veritatis, sed rerum, molestiae cumque pariatur quaerat. Eos nostrum optio et voluptate mollitia explicabo unde, dicta pariatur deserunt qui?
+                Rerum repellendus
+                Est, corporis? Atque est velit error numquam expedita possimus iure consectetur temporibus eligendi debitis accusantium doloremque, voluptate nostrum, sapiente modi. Enim ea omnis ab asperiores hic magnam nisi atque quasi!
+                is odio in aliquid perferendis qui voluptas autem.
+                Rerum, corporis? Tempore rem iste ad voluptate officia ratione blanditiis odio soluta quae inventore, sed voluptates hic debitis quo deleniti, deserunt autem earum, saepe numquam perferendis rerum minima? At, eos.
+                Eveniet fuga esse harum nemo consequatur aperiam voluptate non? Eaque voluptas numquam at earum repellendus natus aut eveniet exercitationem tempora, quod deleniti culpa alias? Explicabo libero sapiente itaque dolore praesentium?
+                D
+                Ullam itaque aut in at beatae veniam animi doloremque, tempore eum omnis culpa. Voluptates optio sed veritatis sequi et quas error similique dicta consectetur. Perspiciatis quisquam ad accusamus iste impedit.
+                Inventore vel delectus temporibus perspiciatis eaque suscipit ratione? Nemo quisquam repellendus fugiat ex illo sunt ratione ipsam molestiae, labore obcaecati exercitationem fuga at! Animi, consequuntur. A velit labore sapiente quisquam.
+                Est, corporis? Atque est velit error numquam expedita possimus iure consectetur temporibus eligendi debitis accusantium doloremque, voluptate nostrum, sapiente modi. Enim ea omnis ab asperiores hic magnam nisi atque quasi!
+                水电费简单来说范德萨离开就的撒即可浪费的健身卡感觉肯定撒给看见伤口京东方开始了国际法独立思考国际法的上课了广泛的几十个离开艰苦奋斗快乐时光解放东路开个饭店叫过来看房的水果减肥的水果克劳福德更健康是的感觉是个sdjfdslkgdjsgjsdgk
+            </div>
+        </div>
+    </div>
+    <script>
+        var kuang=document.querySelector(".kuang");
+        var hualun=document.querySelector(".kuang>.hualun");
+        var words=document.querySelector(".kuang>.words>div");
+        var i=0;
+       kuang.onmouseover=function(){
+        hualun.style.display="block";
+                kuang.onmousewheel=function(e){
+                e=e||kuang.event;
+                console.log(e.wheelDelta);
+               if(e.wheelDelta>0){
+                i--;
+                if(i==-1) i=0
+                hualun.style.top=`${i*50}px`;
+                words.style.top=`${-i*50}px`;
+               }else{
+                  i++;
+                  if(i==16) i=15;
+                  hualun.style.top=`${i*50}px`;
+                  words.style.top=`${-i*50}px`;
+               }
+            }
+        }
+    kuang.onmouseout=function(){
+        hualun.style.display="none"; 
+    } 
+
+    </script>
+</body>
+</html>

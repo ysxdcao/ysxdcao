@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a{
+             text-decoration: none;
+                color:white;
+            }
+         ul{
+                list-style: none;
+                padding:0;
+                margin:0;
+            }
+        body{
+            margin-top:0;
+            position: relative;
+        }
+        .part1{
+            position: relative;
+            background: url("img/head_07.jpg") no-repeat;
+            width: 100%;
+            height: 1277px;
+        }
+        .header{
+            width: 100%;height: 70px;
+            background: rgba(51, 47, 47,0.7)
+        }
+        .header>a{
+            width:9%;
+            float: left;
+            margin: 11px 13%;
+        }
+        .header>a>img{
+            width:100%;height: 48px;
+        }
+        .header>ul{
+            float: left;
+            width:65%;
+            height: 70px;
+            margin-top: 0;
+        }
+        .header>ul>li{
+            float: left;
+            height: 48px;
+            margin-right: 3%;
+            margin-top: 22px;
+        }
+        .header>ul>li>a>span:last-child{
+            padding-bottom: 25px;
+        }
+        .header>ul>li>a>span:last-child:hover{
+            border-bottom: 2px solid yellow;
+        }
+        .header>ul>li>a{
+          font-size: 16px;
+        }
+        .header>ul>li>a>span:first-child{
+            margin-right:25px;
+            color:#907878;
+        }
+        .part1>a{
+            position: absolute;
+            top:0;
+            left:200px;
+        }
+        .pf>ul>li{
+            float: left;
+        }
+        .pf>ul:first-child>li{
+            width: 171px;
+            height: 44px; 
+            margin-right: 40px;  
+        }
+        .pf>ul:first-child>li:first-child{
+            background: 0px 0px url("img/gjol_gjqt3.png") no-repeat;
+        }
+        .pf>ul:first-child>li:first-child:hover{
+            background: 0px -46px url("img/gjol_gjqt3.png") no-repeat; 
+        }
+        .pf>ul:first-child>li:last-child{
+            background: -171px 0px url("img/gjol_gjqt3.png") no-repeat;
+        }
+        .pf>ul:first-child>li:last-child:hover{
+            background: -171px -46px url("img/gjol_gjqt3.png") no-repeat;
+        }
+        .pf>ul{
+            float: left;
+        }
+        .pf{
+            margin-left:650px;
+            margin-top:5px;
+        }
+        .pf>ul:first-child{
+            margin:35px 0 0 30px;
+        }
+        .rm{
+            margin-top:500px;
+            margin-left:490px;
+        }
+        .gm>a{
+            width: 208px;height: 69px;
+            display: inline-block;
+        }
+        .gm>a:first-child{
+            background: 0px 0px url("img/pulic_btn1.png") no-repeat;
+        }
+        .gm>a:first-child:hover{
+            background: 0px -70px url("img/pulic_btn1.png") no-repeat;
+        }
+        .gm>a:nth-child(3){
+            background: -209px 0px url("img/pulic_btn1.png") no-repeat;
+        }
+        .gm>a:nth-child(3):hover{
+            background: -209px -70px url("img/pulic_btn1.png") no-repeat;
+        }
+        .gm>a:last-child{
+            background: -418px 0px url("img/pulic_btn1.png") no-repeat;
+        }
+        .gm>a:last-child:hover{
+            background: -418px -70px url("img/pulic_btn1.png") no-repeat; 
+        }
+        .gm>img{
+            margin-bottom:15px;
+            margin-left:13px;
+            margin-right: 18px;
+        }
+        .gm{
+            margin-left:450px;
+            margin-top:42px;
+        }
+        .right{
+            width: 136px;
+            height: 422px;
+            position: fixed;
+            background: url("img/fc_bg.png") no-repeat;
+            right:5px;
+            top:300px;
+            z-index: 999;
+        }
+        .right>div{
+            background: url("img/right_nav_bg.png") no-repeat;
+            padding-left:3px;
+        }
+        .right>div>p{
+            display: inline-block;
+            width: 126px;height: 39px;
+            margin:0;
+            font-size: 14px;
+            color:white;
+            text-align: center;
+            padding-top:8px;
+        }
+        .right>div>div{
+            width: 126px;height: 284px;
+        }
+        .right>a{
+            display: inline-block;
+            width:126px;height: 39px;
+            margin-left:5px;
+            text-align: center;
+            color:black;
+            font-size:16px;
+            line-height: 38px;
+        }
+        .right>a:nth-child(2){
+            background: 0px 0px url("img/r_b.png") no-repeat;
+            margin-top:3px;
+            margin-bottom:3px;
+        }
+        .right>a:nth-child(2):hover{
+            background: 0px -40px url("img/r_b.png") no-repeat;
+        }
+        .right>a:last-child{
+            background: 0px 0px url("img/r_logo.png") no-repeat; 
+        }
+        .right>a:last-child:hover{
+            background: 0px -40px url("img/r_logo.png") no-repeat;
+        }
+        .right>div>div>img{
+            width: 100px;height: 100px;
+            margin-left:15px;
+            margin-top:18px;
+        }
+        .right>div>div>img:nth-child(3){
+            margin-top:0;
+        }
+        .right>div>div>span{
+            margin-left:22px;
+        }
+        .right>div>div>span>img{
+            width: 17px;height: 17px;
+        }
+        .iconRig{
+            width: 28px;height: 54px;
+            padding-top:8px;
+            background:#d8bc81;
+            position: fixed;
+            text-align: center;
+            right:141px;
+            top:319px;
+            z-index: 999;
+        }
+        .iconRig>a{
+            color:black;
+        }
+        .banner{
+            position: relative;
+            width: 100%;height: 493px;
+            background: rgba(51, 47, 47,0.5);
+        }
+        .banner>div>ul{
+            position: absolute;
+            left:310px;
+            top:408px;
+            z-index: 2;
+            background: rgba(51, 47, 47,0.3);
+        }
+        .banner>div>ul>li{
+            float: left;
+        }
+        .banner>div{
+            position: relative;
+        }
+       .banner> div>img{
+            position: absolute;
+            z-index: 0;
+        }
+        .banner>div>ul>li>a{
+          display: block; 
+          width: 142px;
+          height: 40px;
+          font-size:15px;
+          text-align: center;
+          line-height: 40px;
+        }
+      .banner>div>.show1{
+            z-index: 1;
+        }
+      .banner>div>ul>li>.show2{
+            background: #d8bc81;
+        }
+        .banner>div>img{
+           position: absolute;
+           left:310px;
+           top:100px;
+        }
+        .part2{
+            width: 100%;height: 955px;
+            background: url("img/bl_bg.jpg") no-repeat;
+            position: relative;
+        }
+        .part2>.topimg{
+        margin-left:45%;
+        }
+        .part2>img:nth-child(2){
+            margin-left:350px;
+            margin-top:30px;
+        }
+       .part2>.juese>ul{
+           position: absolute;
+           right: 240px;
+           top:180px;
+           z-index: 33;
+       }
+       .part2>.juese>ul>li{
+           width:163px;
+           height: 180px;
+       }
+       .part2>.juese>ul>li:first-child{
+           background:0px -181px url("img/job_icon.png") no-repeat;
+       }
+       .part2>.juese>ul>li:nth-child(2){
+          background:0px -181px url("img/job_icon2.png") no-repeat;
+       }
+       .part2>.juese>ul>li:nth-child(3){
+        background:0px -181px url("img/job_icon3.png") no-repeat;
+      }
+     .part2>.juese>ul>li:nth-child(4){
+        background:0px -162px url("img/job_icon4.png") no-repeat;
+        margin-left:10px;
+      }
+      .part2>.juese>ul>li.active{
+        background:0px 0px url("img/job_icon.png") no-repeat;
+      }
+      .part2>.juese>ul>li.show0{
+        background:0px 0px url("img/job_icon.png") no-repeat;
+      }
+      .part2>.juese>ul>li.show1{
+        background:0px 0px url("img/job_icon2.png") no-repeat;
+      }
+      .part2>.juese>ul>li.show2{
+        background:0px 0px url("img/job_icon3.png") no-repeat;
+      }
+      .part2>.juese>ul>li.show3{
+        background:0px 0px url("img/job_icon4.png") no-repeat;
+      }
+ .part2>.bl{
+         position: relative;
+         
+      }
+ .part2>.bl>div{
+     position: absolute;
+     left:50px;
+     transition: 1s;
+ }     
+    .part2>.bl>img:first-child{
+        position: absolute;
+        left:-50px;
+        top:7px;
+        transition: 1s;
+    }
+    .part2>.bl>div>img{
+     position: absolute;
+     left:960px;
+     top:130px;
+    }
+    .part2 a{
+     width: 168px;height: 49px;
+     background: url("img/btn_bg_1.png") no-repeat;
+     display: block;
+     position: absolute;
+     left:1070px;
+     top:536px;  
+     text-align: center;
+     line-height: 49px;
+     color:black;
+     font-size:20px;
+     z-index: 30;
+    }
+.part2>.cy{
+        position: relative;
+        display: none;
+     }
+.part2>.cy>div{
+    position: absolute;
+    left:-600px;
+    transition: 1s;
+}     
+ .part2>.cy>img:first-child{
+       position: absolute;
+       left:800px;
+       top:-20px;
+       transition: 1s;
+   }
+ .part2>.cy>div>img{
+    position: absolute;
+    left:960px;
+    top:130px;
+   }
+.part2>.ywy{
+        position: relative;
+        display: none;
+     }
+.part2>.ywy>div{
+    position: absolute;
+    left:-600px;
+    transition: 1s;
+}     
+ .part2>.ywy>img:first-child{
+       position: absolute;
+       left:700px;
+       top:-130px;
+       transition: 1s;
+   }
+ .part2>.ywy>div>img{
+    position: absolute;
+    left:960px;
+    top:130px;
+ }
+.part2>.jxy{
+    position: relative;
+    display: none;
+ }
+.part2>.jxy>div{
+position: absolute;
+left:-600px;
+transition: 1s;
+}     
+.part2>.jxy>img:first-child{
+   position: absolute;
+   left:50px;
+   top:-100px;
+   transition: 1s;
+}
+.part2>.jxy>div>img{
+position: absolute;
+left:960px;
+top:130px;
+}
+.part2>.bl>img.jus0{
+left:0px;
+}
+.part2>.bl>div.text0{
+left:0px;
+}
+.part2>.cy>img.jus1{
+ left:750px;
+    }
+.part2>.cy>div.text1{
+    left:-500px;
+ }
+.part2>.ywy>img.jus2{
+left:650px;
+ }
+.part2>.ywy>div.text2{
+    left:-500px;
+ }
+.part2>.jxy>img.jus3{
+left:0px;
+ }
+.part2>.jxy>div.text3{
+    left:-500px;
+ }
+ .part3{
+    width: 100%;height: 902px;
+    background: url("img/tsbig_bg.png") no-repeat;
+    position: relative;
+}
+.part3>.topimg{
+    margin-left:45%;
+    }
+.part3>img:nth-child(2){
+        margin-left:350px;
+        margin-top:30px;
+    }
+ .part3>div>div.mmi{
+     width:1200px; height: 38px;
+     margin-top:50px;
+     margin-left:345px;
+ }   
+ .part3>div>div.mmi>i{
+     width: 370px;height: 38px;
+     display: block;
+     float: left;
+ }
+ .part3>div>div.mmi>i:first-child{
+   background:0px 0px url("img/title_p.png") no-repeat;
+   margin-right: 45px;
+ }
+ .part3>div>div.mmi>i:nth-child(2){
+ background:-371px 0px url("img/title_p.png") no-repeat;
+ margin-right: 45px;
+ }
+ .part3>div>div.mmi>i:last-child{
+background:-742px 0px url("img/title_p.png") no-repeat;
+ }
+ .part3>div>div.mmt{
+    margin-top:20px;
+    margin-left:345px; 
+ }
+ .part3>div>div.mmt>a{
+    display: block;
+    float: left;
+    margin-right:45px;
+ }
+ .part3>div>div.mmc{
+    width:1200px; height: 54px;
+    margin-top:50px;
+    margin-left:345px;
+}   
+.part3>div>div.mmc>i{
+    width: 370px;height: 54px;
+    display: block;
+    float: left;
+}
+.part3>div>div.mmc>i:first-child{
+  background:0px -43px url("img/title_p.png") no-repeat;
+  margin-right: 45px;
+}
+.part3>div>div.mmc>i:nth-child(2){
+background:-371px  -43px url("img/title_p.png") no-repeat;
+margin-right: 45px;
+}
+.part3>div>div.mmc>i:last-child{
+background:-742px  -43px url("img/title_p.png") no-repeat;
+}
+.part4{
+    width: 100%;height: 901px;
+    background: url("img/video_bg.jpg") no-repeat;
+    position: relative;
+}
+.part4>.topimg{
+    margin-left:45%;
+    }
+.part4>img:nth-child(2){
+        margin-left:350px;
+        margin-top:30px;
+    }
+.part4>.icon{
+    margin-top:170px;
+    margin-left:300px;
+}
+.part4>.icon>ul>li{
+    width: 148px;height: 59px;
+    margin-bottom: 10px;
+}
+.part4>.icon>ul>li:first-child{
+    background:0px  0px url("img/v_nav.png") no-repeat;
+}
+.part4>.icon>ul>li:nth-child(2){
+    background:-149px  0px url("img/v_nav.png") no-repeat;
+}
+.part4>.icon>ul>li:nth-child(3){
+    background:-298px  0px url("img/v_nav.png") no-repeat;
+}
+.part4>.icon>ul>li:last-child{
+    background:-447px  0px url("img/v_nav.png") no-repeat;
+}
+.part4>.icon>ul>li.active{
+    background:0px  -60px url("img/v_nav.png") no-repeat;
+}
+.part4>.zhanshi{
+    width: 994px;height: 580px;
+    margin-left:490px;
+    margin-top:-310px;
+}
+.part4>.zhanshi>ul>li{
+    float: left;
+    position: relative;
+}
+.part4>.zhanshi>ul>li:nth-child(2){
+    margin-left:12px;
+    margin-top:-90px;
+}
+.part4>.zhanshi>ul>li:nth-child(3){
+    margin-left:12px;
+    margin-top:7px;
+}
+.part4>.zhanshi>ul>li:nth-child(4){
+    margin-left:12px;
+    margin-top:-230px;
+}
+.part4>.zhanshi>a{
+    display: block;
+    width: 290px;height: 59px;
+    background:0px 0px url("img/more_btn.jpg") no-repeat;
+    position: absolute;
+    left:1194px;
+    top:600px;
+}
+.part4>.zhanshi>a:hover{
+    background:0px -60px url("img/more_btn.jpg") no-repeat;
+}
+
+.part4>.zhanshi1>ul>li>span{
+    position: absolute;
+    display: block;
+    left:10px;
+    top:10px;
+    background:#000;
+    opacity: 0.4;
+    border: 1px solid #9f8e67;
+}
+.part4>.zhanshi1>ul>li>span:hover{
+    opacity: 0.1;
+    border: 1px solid yellow;
+}
+.part4>.zhanshi1>ul>li>a{
+    position: absolute;
+    display: block;
+    left:41%;
+    top:39%;
+}
+.part4>.zhanshi1>ul>li:first-child>span{
+    width: 269px;
+    height: 339px;
+}
+.part4>.zhanshi1>ul>li:nth-child(2)>span{
+    width: 369px;
+    height: 305px;
+}.part4>.zhanshi1>ul>li:nth-child(3)>span{
+    width: 369px;
+    height: 209px;
+}.part4>.zhanshi1>ul>li:nth-child(4)>span{
+    width: 269px;
+    height: 245px;
+}
+.part4>.zhanshi2,.part4>.zhanshi3,.part4>.zhanshi4{
+    display: none;
+}
+.part5{
+    width: 100%;height: 1099px;
+    background: url("img/patch_bg.jpg") no-repeat;
+    position: relative;
+}
+.part5>.topimg{
+    margin-left:45%;
+    }
+.part5>img:nth-child(2){
+        margin-left:350px;
+        margin-top:30px;
+    }
+    .part4>.icon>ul>li.sho0{
+        background:0px  -60px url("img/v_nav.png") no-repeat;
+    }
+    .part4>.icon>ul>li.sho1{
+        background:-149px  -60px url("img/v_nav.png") no-repeat;
+    }
+    .part4>.icon>ul>li.sho2{
+        background:-298px  -60px url("img/v_nav.png") no-repeat;
+    }
+    .part4>.icon>ul>li.sho3{
+        background:-447px  -60px url("img/v_nav.png") no-repeat;
+    }
+    .part5>.peizhi{
+        width: 1200px;height: 400px;
+        margin: auto;
+        margin-top:50px;
+    }
+    .part5>.peizhi>table{
+        width: 1200px;height: 400px;
+        table-layout: fixed;
+    }
+    .part5>.peizhi>table>tbody>tr>td{
+        height: 50px;
+        width: 200px;
+        border-top:1px solid #d8bc81;
+        border-left:1px solid #d8bc81;
+        text-align: center;
+        line-height: 49px;
+        color:#aeaf85;
+    }
+    .part5>.peizhi>table>tbody>tr:last-child>td{
+        border-bottom:1px solid #d8bc81;
+    }
+    .part5>.peizhi>table>tbody>tr>td:last-child{
+        border-right: 1px solid #d8bc81;;
+    }
+    .part5>.peizhi>table>tbody>tr>td:first-child{
+        color:tomato;
+        background:rgba(51, 47, 47,0.3);
+    }
+    .part5>.peizhi>table>tbody>tr:first-child>td{
+      color:tomato;
+      background:rgba(51, 47, 47,0.3);
+    }
+    .motai{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left:0;
+        top:0;
+        background: rgba(51, 47, 47,0.6);
+        display: none;
+        z-index: 999;
+    }
+    .motai>div{
+        width: 794px;height: 550px;
+    }
+    .motai>div>a:first-child{
+        display: block;
+        position: absolute;
+       left:1310px;
+       top:190px;   
+    }
+    .motai>div>img:last-child{
+        margin-left:70%;
+        margin-top:24%
+    }
+ .part5>.gtitle>ul>li{
+     float: left;
+     margin-right: 120px;
+ }
+ .part5>.gtitle{
+     margin-top:180px;
+     margin-left:350px;
+ }
+ .part5>.gtxt{
+     width: 1600px; height: 211px;
+     margin-top:60px;
+     margin-left:310px;
+ }
+ .part5>.gtxt>div{
+     float: left;
+     margin-right: 74px;
+ }
+ .part5>.gtxt>div:first-child{
+     width: 263px;height: 211px;
+     background: url("img/dk_bg_1.png");
+     color:peru;
+ }
+ .part5>.gtxt>div:nth-child(2){
+    width: 630px;height: 211px;
+    background: url("img/dk_bg_2.png");
+}
+.part5>.gtxt>div:nth-child(3){
+    width: 247px;height: 211px;
+    background: url("img/dk_bg_3.png");
+    position: relative;
+    overflow: hidden;
+}
+.part5>.gtxt>div:first-child>h2{
+    margin-left:45px;
+}
+.part5>.gtxt>div:first-child>h3{
+    margin-top:30px;
+ margin-left:95px;
+}
+.part5>.gtxt>div:first-child>p{
+    margin-left:61px;
+  color:white;  
+}
+.part5>.gtxt>div:first-child>div{
+width:262px; height: 34px;
+}
+.part5>.gtxt>div:first-child>div>a{
+    display: block;
+    width: 116px;
+    height: 33px;
+    float: left;
+}
+.part5>.gtxt>div:first-child>div>a:first-child{
+background:0 0 url("img/kf_phone.jpg") no-repeat;
+margin-right:12px;
+margin-left:9px;
+}
+.part5>.gtxt>div:first-child>div>a:first-child:hover{
+background:0 -34px url("img/kf_phone.jpg") no-repeat;
+}
+.part5>.gtxt>div:first-child>div>a:last-child{
+ background:-117px 0 url("img/kf_phone.jpg") no-repeat;  
+}
+.part5>.gtxt>div:first-child>div>a:last-child:hover{
+    background:-117px -34px url("img/kf_phone.jpg") no-repeat;   
+}
+.part5>.gtxt>div:nth-child(3)>div>img{
+    float: left;
+    margin:16px -6px 0 23px;
+}
+.part5>.gtxt>div:nth-child(3)>div{
+width: 247px;height: 211px;   
+position: absolute;
+top:0;
+}
+    </style>
+</head>
+<body>
+    <div class="part1">
+         <a href="javascript:;"> <img src="img/logo.png" alt="" title="古剑奇谭三"></a>
+          <div class="header">
+                    <a href="javascript:;">
+                         <img src="img/header-logo.png" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="javascript:;"><span></span><span style=" border-bottom: 2px solid yellow;">官网首页</span></a></li>
+                        <li><a href="javascript:;"><span>/</span>  <span>新闻资讯</span> </a></li>
+                        <li><a href="javascript:;"><span>/</span>  <span>游戏下载</span> </a></li>
+                        <li><a href="javascript:;"><span>/</span>  <span>游戏资料</span></a></li>
+                        <li><a href="javascript:;"><span>/</span>  <span>影音图库</span></a></li>
+                        <li><a href="javascript:;"> <span>/</span> <span>官方商城</span></a></li>
+                        <li><a href="javascript:;"> <span>/</span> <span>客户服务</span></a></li>
+                    </ul>
+         </div>
+      <div class="pf">
+          <ul>
+                <li><a href="javascript:;"></a></li>
+                <li><a href="javascript:;"></a></li>
+          </ul>
+         <ul>
+             <li><a href="javascript:;"><img src="img/jl_img_1.png" alt=""></a></li>
+             <li><a href="javascript:;"><img src="img/jl_img_2.png" alt=""></a></li>
+             <li><a href="javascript:;"><img src="img/jl_img_3.png" alt=""></a></li>
+         </ul>     
+      </div>
+      <div class="rm">
+         <img src="img/time_by2.png" alt="">
+      </div>
+      <div class="gm">
+          <a href="javascript:;"></a>
+          <img src="img/r_icon.png" alt="">
+          <a href="javascript:;"></a>
+          <img src="img/r_icon.png" alt="">
+          <a href="javascript:;"></a>
+      </div>
+      <div class="iconRig">
+          <a href="javascript:;">
+              收起
+          </a>
+      </div>
+      <div class="right">
+         <div>
+          <p>关注官方账号
+              <br>
+             获取最新资讯</p>
+          <div>
+              <img src="img/wx_img.jpg" alt="">
+              <span><img src="img/icon_wx.png " alt=""> 官方微信</span>
+              <img src="img/wb-1.png" alt="">
+              <span><img src="img/icon_wb.png" alt="">官方微博</span>
+          </div>
+        </div>
+          <a href="javascript:;">立即注册</a>
+          <a href="javascript:;">进入论坛</a>
+      </div>
+      <script>
+          var k=0;
+          document.querySelector(".iconRig").onclick=function(){
+       if(k==0) {
+           document.querySelector(".right").style.display="none";
+           document.querySelector(".iconRig").style.right="8px";
+           document.querySelector(".iconRig").innerHTML="展开";
+           k++;
+       }else{
+        document.querySelector(".right").style.display="block";
+        document.querySelector(".iconRig").style.right="141px";
+        document.querySelector(".iconRig").innerHTML="收起";
+        k=0;
+
+       }
+          }
+      </script>
+      <div class="banner">
+            <div>
+                    <img src="img/banner_32.jpg" alt="">
+                    <img src="img/banner_33.jpg-id=1.jpg" alt="">
+                    <img src="img/banner_29.jpg" alt="">
+                    <img src="img/banner_27.jpg" alt="">
+                    <img src="img/banner_13.jpg" alt="">
+                    <ul>
+                        <li><a href="javascript:;">新春福利来袭</a></li>
+                        <li><a href="javascript:;">亥岁锦绣春</a></li>
+                        <li><a href="javascript:;">登入NVIDIA SHIELD</a></li>
+                        <li><a href="javascript:;">主题一卡通</a></li>
+                        <li><a href="javascript:;">游戏特色</a></li>
+                    </ul>
+                </div>
+               <script>
+                   var b;var i=0;
+                   var img1=document.querySelectorAll(".banner>div>img");
+                   var a1=document.querySelectorAll(" .banner>div>ul>li>a")
+                   var u1=document.querySelector(".banner>div>ul");
+                //控制函数
+                   function control(i){
+                     return new Promise(function(open){
+                        for(elem of img1){
+                         elem.removeAttribute("class");
+                        }
+                        img1[i].setAttribute("class","show1");
+                        open();
+                     })
+                //定时器
+                   }
+                   function dsq(){
+                       return new Promise(function(open){
+                        a1[i].setAttribute("class","show2");
+                        img1[i].setAttribute("class","show1");
+                         b=setInterval(function(){
+                         i++;
+                         if(i==5) i=0;
+                         control(i);
+                         yuand(i);
+                         },2000)
+                       })
+                       open();
+                   }
+                   dsq();
+                 //圆点背景变换函数
+                   function yuand(i){
+                       for(elem of a1){
+                         elem.removeAttribute("class");
+                       }
+                       a1[i].setAttribute("class","show2");
+                   }
+                 //圆点控制函数
+                     a1.forEach(function(elem,j){
+                         elem.onmouseover=function(){
+                           i=j;
+                           clearInterval(b);
+                           yuand(j);
+                           control(j);
+                         }
+                          elem.onmouseout=function(){
+						  dsq();
+						  }   
+                     })
+               </script>
+      </div>
+    </div>
+    <div class="part2">
+        <div class="topimg">
+            <img src="img/bt_top.png" alt="">
+        </div>
+        <img src="img/job_title.png" alt="">
+        <div class="bl tart">
+             <img src="img/bl_rw.png" alt="">
+           <div>
+             <img src="img/bl_text.png" alt="">
+             <a href="javascript:;">角色详情</a>
+          </div>
+        </div>
+        <div class="cy tart">
+            <img src="img/cy_rw.png" alt="">
+          <div>
+            <img src="img/cy_text.png" alt="">
+            <a href="javascript:;">角色详情</a>
+         </div>
+       </div>  
+       <div class="ywy tart">
+        <img src="img/ywy_rw.png" alt="">
+      <div>
+        <img src="img/ywy_text.png" alt="">
+        <a href="javascript:;">角色详情</a>
+     </div>
+   </div>  
+   <div class="jxy tart">
+    <img src="img/jxy_rw.png" alt="">
+  <div>
+    <img src="img/jxy_text.png" alt="">
+    <a href="javascript:;">角色详情</a>
+ </div>
+</div>  
+        <div class="juese">
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <script>
+                var jus=[".part2>.bl>img:first-child",".part2>.cy>img:first-child",".part2>.ywy>img:first-child",".part2>.jxy>img:first-child"];
+                var text=[".part2>.bl>div",".part2>.cy>div",".part2>.ywy>div",".part2>.jxy>div"];
+                var dis=document.querySelectorAll(".part2>.tart");
+                var juese=document.querySelectorAll(".part2>.juese>ul>li");
+                var bj=["img/bl_bg.jpg","img/cy_bg.jpg","img/ywy_bg.jpg","img/wz_bg.jpg"];
+            function yd(i){
+               setTimeout(function(){
+                for(s of jus){
+                    document.querySelector(`${s}`).removeAttribute("class");
+                }
+                document.querySelector(`${jus[i]}`).setAttribute("class",`jus${i}`);
+                for(g of text){
+                  document.querySelector(`${g}`).removeAttribute("class");
+              }
+              document.querySelector(`${text[i]}`).setAttribute("class",`text${i}`);
+               },100)     
+            }
+           function xs(i){
+               return new Promise(function(open){     
+                for(d of dis){
+                    d.style.display="none";
+                }
+                   dis[i].style.display="block";
+                 open();
+               })
+           } 
+            juese.forEach(function(elem,i){
+                elem.onmouseover=function(){
+                    for(j of juese){
+                        j.removeAttribute("class");
+                    }
+                   juese[i].setAttribute("class",`show${i}`);
+                   document.querySelector(".part2").style.cssText=`background:url(${bj[i]})`;
+                   xs(i).then(yd(i));
+                }
+            })
+        </script>
+    </div>
+    <div class="part3">
+        <div class="topimg">
+            <img src="img/bt_top.png" alt="">
+        </div>
+        <img src="img/ts_title.png" alt="">
+        <div>
+            <div class="mmi">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+            </div>
+            <div class="mmt">
+                <a href="javascipt">
+                    <img src="img/ts_img_1.jpg" alt="">
+                </a>
+                <a href="javascipt">
+                    <img src="img/ts_img_2.jpg" alt="">
+                </a>
+                <a href="javascipt">
+                    <img src="img/ts_img_3.jpg" alt="">
+                </a>
+            </div>
+            <div class="mmc">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+            </div>
+        </div>
+    </div>
+    <div class="part4">
+            <div class="topimg">
+                 <img src="img/bt_top.png" alt="">
+                </div>
+            <img src="img/video_title.png" alt="">
+            <div class="icon">
+                <ul>
+                    <li class="active"><a href="javascript:;"></a></li>
+                    <li><a href="javascript:;"></a></li>
+                    <li><a href="javascript:;"></a></li>
+                    <li><a href="javascript:;"></a></li>
+                </ul>
+            </div>
+            <div class="zhanshi1 zhanshi">
+               <ul>
+                   <li>
+                       <img src="img/v_1.jpg" alt="">
+                       <span></span>
+                       <a href="javascript;"><img src="img/video_btn.png" alt=""></a>
+                   </li>
+                   <li>
+                       <img src="img/v_2.jpg" alt="">
+                       <span></span>
+                       <a href="javascript;"><img src="img/video_btn.png" alt=""></a>
+                   </li>
+                   <li>
+                       <img src="img/v_3.jpg" alt="">
+                       <span></span>
+                       <a href="javascript;"><img src="img/video_btn.png" alt=""></a>
+                   </li>
+                   <li>
+                       <img src="img/v_4.jpg" alt="">
+                       <span></span>
+                       <a href="javascript;"><img src="img/video_btn.png" alt=""></a>
+                   </li>
+               </ul>
+               <a href="javascript:;"></a>
+            </div>
+            <div class="zhanshi2 zhanshi">
+                <ul>
+                    <li>
+                        <img src="img/y_1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/y_2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/y_3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/y_4.jpg" alt="">
+                    </li>
+                </ul>
+                <a href="javascript:;"></a>
+             </div>
+            <div class="zhanshi3 zhanshi">
+                <ul>
+                    <li>
+                        <img src="img/j_1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/j_2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/j_3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/j_4.jpg" alt="">
+                    </li>
+                </ul>
+                <a href="javascript:;"></a>
+             </div>
+             <div class="zhanshi4 zhanshi">
+                <ul>
+                    <li>
+                        <img src="img/b_1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/b_2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/b_3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/b_4.jpg" alt="">
+                    </li>
+                </ul>
+                <a href="javascript:;"></a>
+             </div>
+             <script>
+                var sho=document.querySelectorAll(".part4>.icon>ul>li");
+                var zshi=document.querySelectorAll(".part4>.zhanshi");
+                sho.forEach(function(elem,i){
+                    elem.onmouseover=function(){
+                        for(b of sho){
+                            b.removeAttribute("class");
+                        }
+                        sho[i].setAttribute("class",`sho${i}`);
+                        for(c1 of zshi){
+                           c1.style.display="none";
+                        }
+                       zshi[i].style.display="block";
+                    }
+                })
+             </script>
+ </div>
+    <div class="part5">
+        <div class="topimg">
+             <img src="img/bt_top.png" alt="">
+            </div>
+        <img src="img/patch_title.png" alt="">
+        <div class="peizhi">
+           <table>
+               <tr>
+                   <td>运行环境</td>
+                   <td>基础配置</td>
+                   <td>推荐配置</td>
+                   <td>高级配置</td>
+                   <td>超高配置</td>
+                   <td>发烧配置</td>
+               </tr>
+               <tr>
+                   <td>推荐分辨率</td>
+                   <td>1600*900</td>
+                   <td>1920*1080</td>
+                   <td>2560*1440</td>
+                   <td>2560*1440</td>
+                   <td>3840*2160</td>
+               </tr>
+               <tr>
+                   <td>cpu</td>
+                   <td>Intel Core i5 4590</td>
+                   <td>Intel Core i5 8600</td>
+                   <td>Intel Core i5 8600</td>
+                   <td>Intel Core i7 8700</td>
+                   <td>Intel Core i7 8700</td>
+               </tr>
+               <tr>
+                   <td>显卡</td>
+                   <td>NVIDIA GeForce GTX 750Ti</td>
+                   <td>NVIDIA GeForce GTX 1060 6G</td>
+                   <td>NVIDIA GeForce RTX 2060/GTX 1070Ti</td>
+                   <td>NVIDIA GeForce RTX 2070/GTX 1080</td>
+                   <td>NVIDIA GeForce RTX 2080Ti</td>
+               </tr>
+               <tr>
+                   <td>内存</td>
+                   <td>8GB</td>
+                   <td>16GB</td>
+                   <td>16GB</td>
+                   <td>16GB</td>
+                   <td>32GB</td>
+               </tr>
+               <tr>
+                   <td>硬盘空间</td>
+                   <td>40GB</td>
+                   <td>40GB（推荐ssd固态硬盘）</td>
+                   <td>40GB（推荐ssd固态硬盘）</td>
+                   <td>40GB（推荐ssd固态硬盘）</td>
+                   <td>40GB（推荐ssd固态硬盘）</td>
+               </tr>
+               <tr>
+                   <td>外设</td>
+                   <td colspan="5">支持键鼠、xbox手柄及兼容手柄（推荐使用手柄）</td>
+               </tr>
+               <tr>
+                   <td>系统</td>
+                   <td colspan="5">win7sp1以上、win8、win10（不支持32位操作系统）</td>
+               </tr>
+           </table>
+        </div>
+        <div class="gtitle">
+            <ul>
+                <li><img src="img/kf_title.png" alt=""></li>
+                <li><img src="img/gf_title.png" alt=""></li>
+                <li><img src="img/mt_title.png" alt=""></li>
+            </ul>
+        </div>
+        <table></table>
+        <div class="gtxt">
+               <div>
+                   <h3>客服电话</h3>
+                   <h2>010-86483383</h2>
+                   <p>服务时间：7*24小时</p>
+                   <div>
+                       <a href="javascript:;"></a>
+                       <a href="javascript:;"></a>
+                   </div>
+               </div>   
+               <div>
+
+               </div> 
+               <div>
+                   <div>
+                       <img src="img/logo_1.jpg" alt="">
+                       <img src="img/logo_2.jpg" alt="">
+                       <img src="img/logo_3.jpg" alt="">
+                       <img src="img/logo_4.jpg" alt="">
+                       <img src="img/logo_5.jpg" alt="">
+                       <img src="img/logo_6.jpg" alt="">
+                       <img src="img/logo_7.jpg" alt="">
+                       <img src="img/logo_8.jpg" alt="">
+                       <img src="img/logo_9.jpg" alt="">
+                       <img src="img/logo_10.jpg" alt="">
+                       <img src="img/logo_11.jpg" alt="">
+                       <img src="img/logo_12.jpg" alt="">
+                       <img src="img/logo_13.jpg" alt="">
+                       <img src="img/logo_14.jpg" alt="">
+                       <img src="img/logo_15.jpg" alt="">
+                       <img src="img/logo_16.jpg" alt="">
+                       <img src="img/logo_17.jpg" alt="">
+                       <img src="img/logo_18.jpg" alt="">
+                       <img src="img/logo_19.jpg" alt="">
+                       <img src="img/logo_20.jpg" alt="">
+                       <img src="img/logo_21.jpg" alt="">
+                       <img src="img/logo_22.jpg" alt="">
+                       <img src="img/logo_23.jpg" alt="">
+                       <img src="img/logo_24.jpg" alt="">
+                       <img src="img/logo_25.jpg" alt="">
+                       <img src="img/logo_26.jpg" alt="">
+                       <img src="img/logo_27.jpg" alt="">
+                       <img src="img/logo_28.jpg" alt="">
+                       <img src="img/logo_29.jpg" alt="">
+                       <img src="img/logo_30.jpg" alt="">
+                       <img src="img/logo_31.jpg" alt="">
+                       <img src="img/logo_32.jpg" alt="">
+                       <img src="img/logo_33.jpg" alt="">
+                       <img src="img/logo_34.jpg" alt="">
+                       <img src="img/logo_35.jpg" alt="">
+                       <img src="img/logo_36.jpg" alt="">
+                       <img src="img/logo_37.jpg" alt="">
+                       <img src="img/logo_38.jpg" alt="">
+                   </div>
+                   <script>
+                        window.onscroll=function(){
+                        var scoll=document.body.scrollTop||document.documentElement.scrollTop;
+                       if(scoll>=4000){
+                           document.querySelector(".part5>.gtxt>div:nth-child(3)>div").style.cssText="transition:60s";
+                           document.querySelector(".part5>.gtxt>div:nth-child(3)>div").style.top="-1080px";
+                       }else{
+                         document.querySelector(".part5>.gtxt>div:nth-child(3)>div").style.cssText="transition:0s";
+                         document.querySelector(".part5>.gtxt>div:nth-child(3)>div").style.top="0px";
+                       }
+                     }
+                    </script>
+               </div>
+        </div>
+    </div>
+    <div class="motai">
+        <div>
+            <a href="javascript:;"><img src="img/close_g.png" alt=""></a>
+             <img src="img/tc_banner.png" alt="">
+        </div>
+        <script>
+            window.onload=function(){
+              document.querySelector(".motai").style.display="block";
+            }
+            document.querySelector(".motai").onclick=function(){
+                document.querySelector(".motai").style.display="none";
+            } 
+        </script>
+    </div>
+</body>
+</html>
