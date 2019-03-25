@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+            color:white;
+        }
+        ul{
+            list-style: none;
+            padding:0;
+            margin:0;
+        }
+    .top{
+        width: 100%;height:591px;
+        background: url("img/bg5.png") no-repeat ;
+        background-size:100% 591px;
+    }
+    .header{
+        width: 100%;height: 70px;
+        position: fixed;
+        z-index: 20;
+    }
+    .header>a{
+        width:9%;
+        float: left;
+        margin: 11px 13%;
+    }
+    .header>a>img{
+        width:100%;height: 48px;
+    }
+    .header>ul{
+        float: left;
+        width:65%;
+        height: 70px;
+        margin-top: 0;
+    }
+    .header>ul>li{
+        float: left;
+        height: 48px;
+        margin-right: 9%;
+        margin-top: 16px;
+    }
+    .header>ul>li:hover{
+        border-bottom: 2px solid yellow;
+    }
+    .header>ul>li>a{
+      font-size: 20px;
+    }
+    .three{
+        width:999px;
+        margin: auto;
+        position: relative;
+        top:-65px;
+    }
+    .three>a{
+        display: block;
+        height: 174px;width:333px;
+        position: absolute;
+    }
+    .three>a:first-child{
+        left:0;
+    }
+    .three>a:nth-child(2){
+        left:333px;
+    }
+    .three>a:last-child{
+        left:666px;
+    }
+     .three>a>div{
+         width:213px;height: 52px;
+         margin-left:  80px;
+         padding-top:20px;
+     }
+     .three>a:hover{
+         top:-5px;
+         height:184px;
+     }
+     .fuwu,.fuwu>img{
+         width: 390px;height: 125px;
+     }
+     .fuwu{
+         display: none;
+         position: absolute;
+         left:40%;
+         top:800px;
+         transition: 1s;
+     }
+     body{
+         padding:0;
+         margin-top: 0;
+     }
+     .part2{
+         width: 100%;height: 1000px;
+     }
+     .phone{
+         width:1000px;height: 700px;
+         position: absolute;
+         left:23%;
+         top:970px;
+     }
+     .phone>.left>div>ul>li{
+         width:640px;height:85px;
+         margin-bottom: 20px;
+     }
+     .phone>.left>div>ul>li>a{
+         color:black;
+     }
+     .phone>.left>div>ul>li>a>div{
+         float: left;
+     }
+     .phone>.left>div>ul>li>a>div>img{
+         width: 40px; height: 40px;
+     }
+     .phone>.left>div>ul>li>a>div:nth-child(2){
+         width:588px;height: 40px;
+         font-size: 26px;
+         margin-left:12px;
+     }
+     .phone>.left>div>ul>li>a>div:nth-child(3){
+         margin-left: 12px;
+     }
+     .phone>.left>div:first-child{
+         font-size: 40px;
+     }
+     .phone>.left>div:nth-child(2){
+         margin-top:80px;
+     }
+     .phone>.right>img:first-child{
+         width: 346px;height: 708px;
+     }
+     .phone>.right{
+         position: absolute;
+         top:0;
+         left:70%;
+         z-index: 8;
+     }
+     .part3{
+         width: 100%;height: 900px;
+         background: #ffc107;
+         position: relative;
+     }
+     .part3>.lunbo1{
+         position: absolute;
+         left:450px;
+         top:300px;
+        border: 1px solid red;
+        overflow: hidden;
+        z-index:1;
+       
+     }
+     .part3>.lunbo1>ul{
+         position: absolute;
+         width: 3920px;
+         transition:0.4s;
+         left:0;
+     }
+     .part3>.lunbo1,.part3>.lunbo1>ul>li{
+         width: 980px;height: 360px;
+         float: left;
+     }
+     .part3>.lunbo1>ul>li>div:first-child{
+         width: 600px; height: 340px;
+         float: left;
+         background: white;         
+         margin-top:10px;
+         margin-left:10px;
+         padding-left: 20px;
+     }
+     .part3>.lunbo1>ul>li>div:last-child{
+         width:340px;height:340px;
+         float: left;
+         margin-top:10px;
+         margin-right:10px;
+     }
+     .part3>.lunbo1>ul>li>div>img{
+        width:340px;height:340px;
+     }
+   .part3>.lunbo1>ul>li>div>a{
+        color:black; 
+     }
+    .part3>.lunbo1>ul>li>div>a>h2{
+       font-size:16px;line-height:34px; height:34px; margin-top:40px;
+     }
+    .part3>.lunbo1>ul>li>div>a:last-child{
+      display:block ;width:76px;height:30px;
+      font-size: 16px;
+      border:1px solid #ffc107;
+      color:#ead10f;
+      border-radius: 15px;
+      line-height: 30px;
+      padding-left:10px;
+     }
+     .part3>.lunbo1>ul>li>div>a:last-child:hover{
+         background: #ead10f;
+         color: white;
+     }
+     .part3>div:nth-child(2){
+         position: absolute;
+         left:350px;
+         top:440px;
+     }
+     .part3>div:nth-child(3){
+        position: absolute;
+        left:1490px;
+        top:440px;
+    }
+    .part3>.bg1{
+        width: 758px;height: 420px;
+        background: #e06710;
+        position: absolute;
+        left:720px;
+        top:274px;
+        z-index:0;
+    }
+    .part3>ul{
+        position: absolute;
+        left:900px;
+        top:680px;
+        z-index: 1;
+    }
+    .part3>ul>li{
+      float: left;
+    }
+    .part3>ul>li>a{
+        display: block;
+        width: 10px;height: 10px;
+        border:1px solid red;
+        border-radius: 50%;
+        margin-right: 13px;
+    }
+    .show{
+        background: #1ae6cc;
+    }
+    .anli{
+        display: block;
+        top:70px;
+        
+    }
+    .anli>img{
+        width: 309px;
+        height: 135px;
+    }
+    .footer{
+        width: 100%;
+        height: 358px;
+        background: #5f5957;
+    }
+    .footer>div:first-child{
+        width: 920px;
+        height: 287px;
+        margin: auto;
+    }
+    .footer>div:last-child{
+       width:670px;
+       height: 70px;
+       margin: auto;
+       margin-top:26px;
+       padding-left:250px;
+       color:silver;
+       font-size:12px;
+    }
+    .footer>div:nth-child(2){
+        width: 100%;
+        height:1px;
+        background: white;
+    }
+    .footer>div>.lef{
+        margin-top:70px;
+    }
+    .footer>div>div>ul{
+        float: left;
+        margin-right:50px;
+    }
+    .footer>div>div>ul>li{
+        margin-bottom: 20px;
+    }
+    .footer>div>div>ul>li>a{
+        color:silver;
+        font-size:15px;
+    }
+    .footer>div>div>ul>li>a:hover{
+        color:white;
+    }
+    .footer>div>div{
+        float: left;
+    }
+    .cent{
+        color:#f2eeee;
+        margin-top:20px;
+        margin-left:120px;
+    }
+    .rig>img{
+        width: 90px;height: 90px;
+        margin-left:16px;
+    }
+    .rig>h2{
+        color:#f2eeee;
+        font-size:22px;
+        margin-left:16px;
+    }
+    .rig{
+        margin-top:50px;
+        margin-left:60px;
+    }
+    </style>
+</head>
+<body onload="dsq()">
+    <div class="top">
+        <div class="header">
+            <a href="javascript:;">
+                 <img src="img/header-logo.png" alt="">
+            </a>
+            <ul>
+                <li style="border-bottom: 2px solid yellow;"><a href="javascript:;">首页</a></li>
+                <li><a href="javascript:;">入住加盟</a></li>
+                <li><a href="javascript:;">开放平台</a></li>
+                <li><a href="javascript:;">社会责任</a></li>
+                <li><a href="javascript:;">点外卖</a></li>
+                <li><a href="javascript:;">下载手机版</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="three">
+        <a href="javascript:;" style="background: #1ae6cc;">
+            <div>
+                <h2>我要入驻 ></h2>
+                <p>商家、配送、城市代理、服务市场</p>
+            </div>
+        </a>
+        <a href="javascript:;" style="background:#bd3434;">
+             <div>
+                <h2>开发者接入 ></h2>
+                <p>外卖、餐饮开放平台</p>
+            </div>
+        </a>
+        <a href="javascript:;" style="background:#ead10f;">
+             <div>
+                <h2>我要点外卖 ></h2>
+                <p>快捷下单、一键点餐</p>
+            </div>
+        </a>
+    </div>
+<div class="part2">
+    <div class="fuwu">
+        <img src="img/serviceintro.png" alt="">
+    </div>
+    <div class="phone">
+         <div class="left">
+             <div>品类全覆盖、应有尽有</div>
+             <div>
+                 <ul>
+                     <li>
+                         <a href="javascript:;">
+                             <div><img src="img/01.png" alt=""></div>
+                             <div>美食 Delicacy</div>
+                             <div>大牌优惠</div>
+                         </a>
+                     </li>
+                     <li>
+                            <a href="javascript:;">
+                                    <div><img src="img/02.png" alt=""></div>
+                                    <div>甜点饮品 Desserts&Drinks</div>
+                                    <div>幸福甜蜜</div>
+                                </a>
+                     </li>
+                     <li>
+                            <a href="javascript:;">
+                                    <div><img src="img/03.png" alt=""></div>
+                                    <div>水果生鲜 Fresh foods</div>
+                                    <div>新鲜速达</div>
+                                </a>
+                     </li>
+                     <li>
+                            <a href="javascript:;">
+                                    <div><img src="img/04.png" alt=""></div>
+                                    <div>超市便利 Supermarket</div>
+                                    <div>优惠促销</div>
+                                </a>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+         <div class="right">
+                <img src="img/phone1.png" alt="">
+            </div>
+    </div>
+</div>
+<div class="part3">
+    <div class="lunbo1">
+        <ul>
+            <li>
+                <div>
+                  <a href="javascript:;">
+                    <h2 >美团服务市场</h2>
+                    <h3>米粉面馆接入经营助手服务，收入增幅达51.52%</h3>
+                    <p>开一家店有多操心？加盟、选址、经营、管理到真正赚钱，期间的辛苦只有每家店老板才深有体会。美团服务市场聚集垂直领域优质服务商，打造一站式服务生态！从新店开业到老店升级、从店铺装修到营销托管、从食材供应到金融服务等，为所有商家提供店铺经营全方位服务，解决经营所遇难题，助力轻松做生意。</p>
+                    <a href="javascript:;">查看详情</a>
+                  </a>
+            </div>
+                <div><img src="img/story1.jpg" alt=""></div>
+            </li>
+            <li>
+                    <div>
+                            <a href="javascript:;">
+                              <h2 >美团服务市场</h2>
+                              <h3>米粉面馆接入经营助手服务，收入增幅达51.52%</h3>
+                              <p>开一家店有多操心？加盟、选址、经营、管理到真正赚钱，期间的辛苦只有每家店老板才深有体会。美团服务市场聚集垂直领域优质服务商，打造一站式服务生态！从新店开业到老店升级、从店铺装修到营销托管、从食材供应到金融服务等，为所有商家提供店铺经营全方位服务，解决经营所遇难题，助力轻松做生意。</p>
+                              <a href="javascript:;">查看详情</a>
+                            </a>
+                      </div>
+                          <div><img src="img/bg1.jpg" alt=""></div>
+            </li>
+            <li>
+                    <div>
+                            <a href="javascript:;">
+                              <h2 >美团服务市场</h2>
+                              <h3>米粉面馆接入经营助手服务，收入增幅达51.52%</h3>
+                              <p>开一家店有多操心？加盟、选址、经营、管理到真正赚钱，期间的辛苦只有每家店老板才深有体会。美团服务市场聚集垂直领域优质服务商，打造一站式服务生态！从新店开业到老店升级、从店铺装修到营销托管、从食材供应到金融服务等，为所有商家提供店铺经营全方位服务，解决经营所遇难题，助力轻松做生意。</p>
+                              <a href="javascript:;">查看详情</a>
+                            </a>
+                      </div>
+                          <div><img src="img/bg5.png" alt=""></div>
+            </li>
+            <li>
+                    <div>
+                            <a href="javascript:;">
+                              <h2 >美团服务市场</h2>
+                              <h3>米粉面馆接入经营助手服务，收入增幅达51.52%</h3>
+                              <p>开一家店有多操心？加盟、选址、经营、管理到真正赚钱，期间的辛苦只有每家店老板才深有体会。美团服务市场聚集垂直领域优质服务商，打造一站式服务生态！从新店开业到老店升级、从店铺装修到营销托管、从食材供应到金融服务等，为所有商家提供店铺经营全方位服务，解决经营所遇难题，助力轻松做生意。</p>
+                              <a href="javascript:;">查看详情</a>
+                            </a>
+                      </div>
+                          <div><img src="img/story1.jpg" alt=""></div>
+            </li>
+        </ul>
+    </div>
+    <div><img src="img/story-l.png" alt=""></div>
+    <div><img src="img/story-r.png" alt=""></div>
+    <ul>
+        <li><a href="javascript:;"></a></li>
+        <li><a href="javascript:;"></a></li>
+        <li><a href="javascript:;"></a></li>
+    </ul>
+    <div class="bg1"></div>
+    <div class="fuwu anli">
+            <img src="img/story.png" alt="">
+   </div>
+    <script>
+        var num1=0;var status1=0;var j=0; var dq;var c;
+        var arr1=[0,-980,-1960,-2940];
+        var u1=document.querySelector(".part3>.lunbo1>ul");
+        var a2=document.querySelectorAll(" .part3>ul>li>a")
+ //圆点
+        function yuand(j){
+            for (elem of a2){
+                elem.removeAttribute("class");
+            }
+            a2[j].setAttribute("class","show");
+        }
+        function yuand2(){
+            return new Promise(function(open){
+                a2.forEach(function(elem,i){
+                    elem.onmouseover=function(){
+                       clearInterval(dq);
+                       yuand(i);
+                       j=i;
+                       num1=arr1[i];
+                       t4();
+                       open();
+                    }
+                })
+            })    
+        }
+  //轮播主体
+        function t1(){
+            return new Promise(function(open){
+             u1.style.cssText=`transition: 0s;`;
+             num1=0;
+         open();
+            })
+        }
+        function t2(){
+             u1.style.left="0"; 
+            }
+        function t3(){
+            u1.style.cssText=`transition:0.4s;`;
+        }
+        //t4控制循环
+        function t4(){
+            if(status1==1){
+                t3();
+                status1=0;
+            }
+            u1.style.left=`${num1}px`;
+            if(num1==-2940){
+                setTimeout(function(){
+                t1().then(t2);
+                status1=1;
+                },400)
+            }
+        }
+        function dsq(){
+        return new Promise(function(open){
+         a2[j].setAttribute("class","show");
+           dq=setInterval(function(){
+                num1-=980;
+                t4();
+                j++;
+                if(j==3) j=0;
+                yuand(j);
+               },3000)
+               open();
+        })
+      }
+//左右按钮
+    function left(){
+       return new Promise(function(open){
+        clearInterval(dq);
+        u1.style.left=`${arr1[j]-980}px`;
+        num1=arr1[j]-980;
+        t4();
+        j++;
+        if(j==3) j=0;
+        yuand(j);
+        open();
+       })
+    }
+    function right(){
+        return new Promise(function(open){
+            clearInterval(dq);
+            if(j==0) j=3;
+            u1.style.left=`${arr1[j]+980}px`;
+            num1=arr1[j]+980;
+            j--;
+            yuand(j);
+            open();
+        })
+    }
+       document.querySelector(".part3>div:nth-child(2)").onclick=function(){
+            clearTimeout(c);
+            clearInterval(dq);
+            c=setTimeout(function(){
+            left().then(dsq);
+           },400)
+           
+       }
+       document.querySelector(".part3>div:nth-child(3)").onclick=function(){
+           right().then(dsq);
+       }
+       document.querySelector(".part3>ul").onmouseover=function(){
+           yuand2().then(dsq);
+       }
+    //
+    </script>
+</div>
+<div class="footer">
+    <div>
+        <table></table>
+       <div class="lef">
+           <ul>
+               <li><a href="javascript:;">开放平台</a></li>
+               <li><a href="javascript:;">媒体报道</a></li>
+               <li><a href="javascript:;">平台制度</a></li>
+               <li><a href="javascript:;">入住加盟</a></li>
+           </ul>
+           <ul>
+               <li><a href="javascript:;">常见问题</a></li>
+               <li><a href="javascript:;">用户反馈</a></li>
+               <li><a href="javascript:;">诚信举报</a></li>
+               <li><a href="javascript:;">加入我们</a></li>
+           </ul>
+       </div>
+       <div class="cent">
+         <h2>品牌合作</h2>
+         <p>wpbg.marketing@meituan.com</p>
+         <h2>客服 1010-9777</h2>
+         <p>周一至周日 9:00~23:00</p>
+         <p>客服不受理商务合作</p>
+       </div>
+       <div class="rig">
+           <h2>更多商家，更多优惠</h2>
+           <img src="img/rig2.png" alt="">
+           <img src="img/rig1.png" alt="">
+       </div>
+    </div>
+    <div></div>
+    <div>
+      <span>©meituan.com 京ICP证070791号</span>
+      <img src="img/backup.png" alt="" width="18px" height="18px" style="margin-left:20px;">
+      <span>京公网安备110136449155545号</span>
+    </div>
+</div>
+    <script>
+        //
+        var movestatus=0;
+        window.onscroll=function(){
+            var h=document.body.scrollTop||document.documentElement.scrollTop;
+            xianshi().then(move);
+            if(h==0){
+                document.getElementsByClassName("header")[0].style.cssText=`background-color:""`;
+            }else{
+            document.getElementsByClassName("header")[0].style.cssText=`background-color:gray`;
+        }
+        }
+        function xianshi(){
+            return new Promise(function(open){
+            var h=document.body.scrollTop||document.documentElement.scrollTop;
+            //console.log(h);
+            if(h>=300){
+                document.getElementsByClassName("fuwu")[0].style.cssText=` display: block;`
+                movestatus=1;
+            }else{
+                document.getElementsByClassName("fuwu")[0].style.cssText=` display: none;`
+                movestatus=0;
+              
+            }
+            open();
+            })
+        }
+            function move(){
+               var h=document.body.scrollTop||document.documentElement.scrollTop;
+               if(movestatus==1&&h>=300){
+                document.getElementsByClassName("fuwu")[0].style.top="750px";
+               }else{
+                document.getElementsByClassName("fuwu")[0].style.top="800px";
+               }
+            }
+    </script>
+</body>
+</html>

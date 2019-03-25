@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img{
+            position: absolute;
+            left:400px;
+            top:250px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h3>播放视频</h3>
+    <video src="res/x.mp4" controls  loop preload="metadata" muted autoplay></video>
+    <a href="javascript:;">
+    <img src="res/pause.png" alt="">
+</a>
+    <script>
+        var i=0;
+        //document.getElementsByTagName("video")[0].volume=0.1;//播放声音
+        document.getElementsByTagName("video")[0].playbackRate=3;//播放速度
+        console.log("当前视频的状态"+ document.getElementsByTagName("video")[0].paused);
+       function play1(){
+        document.getElementsByTagName("video")[0].play();
+       }
+       function zan(){
+        document.getElementsByTagName("video")[0].pause();
+       }
+       document.getElementsByTagName("video")[0].onmouseover=function(){
+        document.getElementsByTagName("img")[0].style.display="block";
+       var b= setInterval(function(){
+            document.getElementsByTagName("img")[0].style.display="none"; 
+            clearInterval(b);
+        },3000);
+       }
+       document.getElementsByTagName("video")[0].onmouseout=function(){
+        document.getElementsByTagName("img")[0].style.display="none"; 
+       }
+       document.getElementsByTagName("img")[0].onmouseover=function(){
+        document.getElementsByTagName("img")[0].style.display="block";
+       }
+       document.getElementsByTagName("img")[0].onclick=function(){
+           if(i==0){
+        document.getElementsByTagName("img")[0].src="res/play.png";
+        document.getElementsByTagName("video")[0].pause();
+        i++;
+    }else{
+        document.getElementsByTagName("img")[0].src="res/pause.png";
+        document.getElementsByTagName("video")[0].play();
+        i=0;
+    }
+       }
+       document.querySelector("body").onkeyup=function(event){
+           console.log(event.keyCode);
+           if(event.keyCode==32){
+               if(i==0) {
+                   document.getElementsByTagName("img")[0].src="res/play.png";
+        document.getElementsByTagName("video")[0].pause();
+        i++;
+
+                }
+               else{
+        document.getElementsByTagName("img")[0].src="res/pause.png";
+        document.getElementsByTagName("video")[0].play();
+        i=0; 
+               }
+           }             
+       }
+    </script>
+</body>
+</html>

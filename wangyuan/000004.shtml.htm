@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=UTF-8"UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=3.0,user-scalable=yes,minimal-ui" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>éœ„è™¹ç¢§æµ· ã€Šå¤å‰‘å¥‡è°­ä¸‰ã€‹é­”åŸŸåœºæ™¯å¤©é¹¿åŸæ›å…‰ - ã€Šå¤å‰‘å¥‡è°­ä¸‰ã€‹å®˜æ–¹ç½‘ç«™</title>
+    <meta name="keywords" content="å¤å‰‘å¥‡è°­ä¸‰,å¤å‰‘å¥‡è°­3,å¤å‰‘ä¸‰,å¤å‰‘3,å›½äº§å•æœº,å›½äº§RPG,å•æœºæ¸¸æˆ,å¤å‰‘å¥‡è°­,ç½‘å…ƒåœ£å”,ä¸Šæµ·çƒ›é¾™,è§’è‰²æ‰®æ¼”,å•æœº,å³æ—¶åˆ¶,è¯•ç©ç‰ˆ"/> 
+    <meta name="description" content="å…¨å³æ—¶åˆ¶å•æœºRPGæ¸¸æˆã€Šå¤å‰‘å¥‡è°­ä¸‰ã€‹å®˜æ–¹ç½‘ç«™ï¼Œè¿›å…¥å®˜ç½‘è·å–æœ€æ–°æ¸¸æˆèµ„è®¯ï¼æ¸¸æˆé¢„å”®ç«çƒ­è¿›è¡Œä¸­ï¼Œ11æœˆ23æ—¥æ­£å¼ä¸Šå¸‚ï¼"/>
+
+    <link href="main.css" tppabs="http://gjqt3.wangyuan.com/dist/201804/css/main.css" rel="stylesheet">
+    <script src="nav_be.js" tppabs="http://gjqt3.wangyuan.com/dist/201804/js/nav_be.js"></script>
+    <script src="html5media.min-3.js" tppabs="http://api.html5media.info/1.2.2/html5media.min.js"></script>
+    <style type="text/css">
+        video::-internal-media-controls-download-button {
+            display:none;
+        }
+        video::-webkit-media-controls-enclosure {
+            overflow:hidden;
+        }
+        video::-webkit-media-controls-panel {
+            width: calc(100% + 30px);
+        }
+
+
+        /*.new_body{background:#212b45 url(http://i3.gbimg.cn/zt/2018/08/05/news/bg_list_ix.jpg) no-repeat center top;position: relative;}*/
+
+        
+        @media screen and (max-width:767px)  {
+			 video{
+                width:100%;
+                height:100%;
+            }
+            body{background:#f2f5fc;min-width:10px;max-width:767px;}
+            .new_body .n_main{width:90%;display:block;min-width:90%}
+            .new_body{background:none;}
+            .nav_news,#footer{display:none;}
+            .conter{
+                width:100%;
+                background:#fff url("bg-2.jpg")/*tpa=http://i3.gbimg.cn/2018/09/27/bg.jpg*/ no-repeat top center;
+                background-size: 100%;
+            }
+            .title{
+                background:none;
+                border-bottom: none;
+                margin-top:26px;
+            }
+            iframe{
+                width:88%;
+                height:auto;
+            }
+            .header{
+                display: none !important;
+            }
+            #return-top{
+                display: none !important;
+            }
+            .news_conter{
+                width:100%;
+            }
+            .title_detail .title_news_detail p{
+                line-height: 32px;
+                font-size: 24px;
+                margin-bottom: 10px;
+                color:#6e572a;
+            }
+            .news_conter p img{
+                width:90% !important;
+                height: auto!important;
+                margin:0 auto;
+            }
+            .news_content{
+                padding-top:0;
+            }
+			.news_content p{line-height: 30px;}
+			
+            .title_detail .title_news_detail span{
+                margin:12px auto 0;
+                background:none;
+                display: inline;
+            }
+            .title_detail .title_news_detail{
+                width:90% !important;
+                margin:0 auto;
+            }
+            .link_box{
+                bottom:8px;
+                left:0;
+            }
+            .news_title{
+                width: 50%;
+                margin: 20px auto 0;
+                text-align: center;
+                display: block;
+            }
+            .enter_in{
+                width:24%;
+                position: absolute;
+                right:0px;
+                bottom: 8px; 
+            }
+            .line_bot{
+                height:54px;
+                width:90%;
+                border-bottom: 1px solid #adacac;
+                position: absolute;
+                bottom: 108px;
+                left:5%;
+            }
+            body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,button,textarea,p,th,td,blockquote{margin:0;padding:0;    font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,STHeitiSC-Light,simsun,\\5B8B\4F53,WenQuanYi Zen Hei,WenQuanYi Micro Hei,"sans-serif";}
+            html,body{-webkit-font-smoothing: antialiased;  -moz-osx-font-smoothing: grayscale;width:100%;height:100%;max-width:750px;position:relative}
+            header,footer,section,article,aside,nav,address,figure,figcaption,menu,details{display:block;margin:0;padding:0;}
+            fieldset,img{border:0;}
+            :focus{outline:0;}
+            input[type="button"],input[type="submit"],input[type="text"],textarea{-webkit-appearance: none;}
+            :link,:visited,ins{text-decoration:none;}
+            .clearfix:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+            .clearfix{zoom: 1}
+            ul,li{list-style:none}
+            ::-webkit-scrollbar{ width: 0;}
+            em{font-style: normal}
+            .text-right{text-align: right}
+            /* å°å±å¹• 320px */
+            @media (min-width: 320px) {
+                html{font-size: 42.6667px;}
+            }
+
+            /* å°å±å¹• 375px */
+            @media (min-width:360px) {
+                html{font-size: 48px;}
+            }
+
+            @media (min-width:375px) {
+                html{font-size: 50px;}
+            }
+            @media (min-width:412px) {
+                html{font-size: 54.9333px;}
+
+            }
+            /* å°å±å¹• 414px */
+            @media (min-width:414px) {
+                html{font-size: 55.2px;}
+
+            }
+            @media (min-width:750px) {
+                html{font-size: 100px;}
+
+            }
+            /*åº•éƒ¨å¼€å§‹*/
+            .m-foot{
+                width: 100%;
+                background: #000;
+                color: #c8c8c8;
+                height:2rem;
+                /*padding:0 2%;*/
+            }
+            .m-foot .footlogo{
+                width:1.96rem;
+                padding-top: 0.2rem;
+                float: left;
+            }
+            .m-foot .footlogo .footimg1{
+                width:1.94rem;
+                height:.47rem;
+                display:block;
+            }
+            .m-foot .footlogo .footimg2{
+                width:1.2rem;
+                height:.59rem;
+                display:block;
+                margin-top:.2rem;
+            }
+            .m-foot .footcont{
+                width:70%;
+                text-align: center;
+                padding-top: 0.18rem;
+                padding-right:3%;
+                float: right;
+                line-height:.36rem;
+            }
+            .m-foot .footcont .ffirst{
+                color:#898989;
+                font-size: 0.18rem;
+                width:100%;
+            }
+            .m-foot .footcont .ffirst span{
+                padding:0 0.04rem;
+            }
+            .m-foot .footcont .ffirst1{
+                padding-top:0.2rem;
+            }
+
+            .foot_box{
+                display: none;
+            }
+			.link_box_pc{
+				display: none;
+			}
+			.pcfoot{
+				display:none;
+			}
+        }
+
+        /*pcç«¯*/
+        @media screen and (min-width:767px){
+            .news_title{
+                display: none;
+            }
+            .enter_in{
+                display: none;
+            }
+            .line_bot{
+                display: none;
+            }
+            .m-foot{
+                display: none;
+            }
+            .line_bot{
+                display: block;
+            }
+			.link_box{
+				display: none;
+			}
+        }
+    </style>
+
+</head>
+<body>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<style>
+		.tisp{height:40px;background:#fff9d4;text-align:center;color:#000;line-height:40px;font-size:14px;display:none;border-bottom:1px solid #000;}
+	</style>
+</head>
+<body>
+<div class="tisp">
+	æ‚¨çš„æµè§ˆå™¨ç‰ˆæœ¬è¾ƒä½ï¼Œä¸ºäº†æ›´å¥½çš„ä½“éªŒï¼Œå»ºè®®æ‚¨æ›´æ¢IE8ä»¥ä¸Šæˆ–ä½¿ç”¨Chromeã€Firefox ã€QQç­‰é«˜ç‰ˆæœ¬æµè§ˆå™¨æŸ¥çœ‹ã€‚
+</div>
+<script src="jquery.js" tppabs="http://gjqt.wangyuan.com/Label/2014/02/20/jquery.js"></script>
+<script>
+
+var browser = (function(){
+	var isIE6 = /msie 6/i.test(navigator.userAgent);
+	var isIE7 = /msie 7/i.test(navigator.userAgent);
+	var isIE8 = /msie 8/i.test(navigator.userAgent);
+	var isIE = /msie/i.test(navigator.userAgent);
+	return {
+		msie:isIE,
+		version:function(){
+		switch(true){
+		case isIE7:return 7;
+		}
+		}()
+	};
+})();
+if(browser.msie==true&&browser.version==7){
+	$('.tisp').show();
+}
+</script>
+</body>
+</html>
+<div class="header">
+   <script>nav_public();</script>
+</div>
+<div class="conter">
+   <img src="new_title.png" tppabs="http://i3.gbimg.cn/2018/09/27/new_title.png" class="news_title" />
+    <div class="title title_detail">
+        <div class="news_conter">
+            <div class="title_news_detail">
+                <p>éœ„è™¹ç¢§æµ· ã€Šå¤å‰‘å¥‡è°­ä¸‰ã€‹é­”åŸŸåœºæ™¯å¤©é¹¿åŸæ›å…‰</p>
+                <span>2018å¹´03æœˆ21æ—¥</span>
+            </div>
+            <div class="line_bot">
+                <p class="link_box_pc">å½“å‰ä½ç½®ï¼š <a href="index-3.html" tppabs="http://gjqt3.wangyuan.com/index.html">é¦–é¡µ</a>  >  <a href="allnews.shtml.htm" tppabs="http://gjqt3.wangyuan.com/info/allnews.shtml">æ–°é—»èµ„è®¯</a></p>
+                <p class="link_box">å½“å‰ä½ç½®ï¼š <a href="index.html" tppabs="http://gjqt3.wangyuan.com/m/index.html">é¦–é¡µ</a>  >  <a href="news.html" tppabs="http://gjqt3.wangyuan.com/m/info/news.html">æ–°é—»èµ„è®¯</a></p>
+                <a href="index.html" tppabs="http://gjqt3.wangyuan.com/m/index.html"><img src="back.png" tppabs="http://i3.gbimg.cn/2018/09/27/back.png" class="enter_in"></a>
+            </div>
+        </div>
+    </div>
+    <div class="news_conter">
+        <div class="news_content">
+<p><p>ã€€ã€€ã€Šå¤å‰‘å¥‡è°­ã€‹ç³»åˆ—ç¬¬ä¸‰éƒ¨å•æœºRPGã€Šå¤å‰‘å¥‡è°­ä¸‰ï¼šæ¢¦ä»˜åƒç§‹æ˜Ÿå‚é‡ã€‹ä»Šæ—¥å¸¦æ¥æœ€æ–°å†…å®¹å±•ç¤ºï¼Œé­”åŸŸåœºæ™¯å¤©é¹¿åŸï¼Œå…¨æ–°äººç‰©éœ“å•†ã€ç¾½æ—çš„èƒŒæ™¯æ•…äº‹æ‚‰æ•°æ­æ™“ã€‚</p>
+<p>ã€€ã€€&ldquo;è¾Ÿé‚ªå¾ˆå¼ºï¼Œä½†åœ¨é­”åŸŸä¹Ÿæœ‰æ•°ä¸å°½çš„å¼ºå¤§çš„æ•Œäººã€‚è‹å¤©ä¹‹ä¸‹ï¼Œé»„åœŸä¹‹ä¸Šï¼Œå‡¡æˆ‘å¦–æ—ï¼Œæ­»ç”Ÿè«èƒ½å¹¸å…ã€‚ç”Ÿäºæ­¤é—´ï¼Œå¿…å®šè¦æˆ˜ã€‚&rdquo;</p>
+<p><strong>ã€å¤©é¹¿åŸã€‘</strong></p>
+<p>ã€€ã€€åœ¨ã€Šå¤å‰‘å¥‡è°­ã€‹çš„ä¸–ç•Œä¸­ï¼Œå¤©ã€åœ°ã€äººä¸‰ç•Œçš„æ‰€åœ¨è¢«ç§°ä¸º&ldquo;å¸¸ä¸–&rdquo;ï¼Œè€Œä¸å¸¸ä¸–ç›¸åçš„å·¨å¤§ç©ºé—´åˆ™æ˜¯&ldquo;é­”åŸŸ&rdquo;ã€‚</p>
+<p>ã€€ã€€é­”åŸŸä¸­ä¸ç‹¬æœ‰é­”ï¼Œä¸å°‘å¦–ç±»å’Œå…½ç±»ä¹Ÿåœ¨å…¶ä¸­ç¹è¡ç”Ÿæ¯ï¼Œåªæ˜¯å› ä¸ºå¸¸ä¸–å„æ—å¯¹é‚£é‡Œæ‰€çŸ¥æå°‘ï¼Œæ‰æœ‰äº†è¿™ç§ç®€å•ç¬¼ç»Ÿçš„å«æ³•ã€‚</p>
+<p>ã€€ã€€æ— è®ºå¸¸ä¸–è¿˜æ˜¯é­”åŸŸä¹‹ä¸­ï¼Œéƒ½å­˜åœ¨ç€è®¸å¤šå¤§å¤§å°å°çš„ç©ºé—´ã€‚è¿™äº›ç©ºé—´çš„é£è²Œå„å¼‚ï¼Œæ—¶é—´æµé€Ÿæˆ–æ˜¯ç›¸åŒã€ç›¸è¿‘ï¼Œä¹Ÿæˆ–æ˜¯ç›¸å·®ç”šè¿œã€‚</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321113734196.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321113734196.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321113734196.jpg"><img class="" alt="" width="600" height="338" src="20180426112310196.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426112310196.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯æ¦‚å¿µå›¾ä¹‹ä¸€</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321113748859.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321113748859.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321113748859.jpg"><img class="" alt="" width="469" height="700" src="20180426112316736.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426112316736.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯æ¦‚å¿µå›¾ä¹‹äºŒ</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321113755155.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321113755155.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321113755155.jpg"><img class="" alt="" width="600" height="350" src="20180426111337333.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111337333.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯è®¾å®šå›¾ï¼ˆæˆ¿å±‹ï¼‰</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321113809565.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321113809565.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321113809565.jpg"><img class="" alt="" width="600" height="350" src="20180426111343471.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111343471.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯æ¨¡å‹ï¼ˆæˆ¿å±‹ï¼‰</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321113816502.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321113816502.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321113816502.jpg"><img class="" alt="" width="600" height="350" src="20180426111349641.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111349641.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯è®¾å®šå›¾ï¼ˆç¯ï¼‰</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321113823272.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321113823272.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321113823272.jpg"><img class="" alt="" width="600" height="350" src="2018042611135529.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/2018042611135529.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯æ¨¡å‹ï¼ˆç¯ï¼‰</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321113828681.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321113828681.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321113828681.jpg"><img class="" alt="" width="600" height="350" src="20180426111359879.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111359879.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯è®¾å®šå›¾ï¼ˆé›•åƒï¼‰</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321113834391.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321113834391.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321113834391.jpg"><img class="" alt="" width="600" height="350" src="20180426111404755.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111404755.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯æ¨¡å‹ï¼ˆé›•åƒï¼‰</p>
+<p>ã€€ã€€è¾Ÿé‚ªç‹åŸå¤©é¹¿å¤„åœ¨é­”åŸŸå•ç‹¬çš„æŸä¸ªç©ºé—´ä¸­ï¼Œä»…ä»…æ˜¯è¿™é‡Œçš„ä¼ æ‰¿å°±æœ‰æ•°åƒå¹´ä¹‹ä¹…ã€‚</p>
+<p>ã€€ã€€é­”ç”±äºåŠ›é‡å±æ€§ä¹‹æ•…ï¼Œæ— æ³•è‡ªç”±åœ°å¾€æ¥äºé­”åŸŸå’Œå¸¸ä¸–ã€‚ç›¸å¯¹çš„ï¼Œä»™ç¥æƒ³è¦è¿›å…¥é­”åŸŸï¼Œåœ¨é€šè¿‡çš„ä¸€ç¬é—´ä¹Ÿä¼šé­åˆ°ç©ºé—´æ³•åˆ™çš„æ’æ–¥ï¼Œç”šè‡³æ¯”é­”å—åˆ°çš„å½±å“æ›´å¼ºã€‚å› æ­¤ï¼Œé­”åŸŸå¯¹ç¥ä»™äºŒæ—æ¥è¯´å‡ ä¸ºç¦åœ°ï¼Œä»–ä»¬å¾ˆéš¾å¾—çŸ¥å…³äºè¿™é‡Œçš„æ›´å¤šä¿¡æ¯ã€‚</p>
+<p>ã€€ã€€åå€’æ˜¯ä¸€äº›åŠ›é‡ç‰¹æ®Šçš„å¦–ï¼Œèƒ½å¤Ÿåœ¨ä¸¤åœ°ä¹‹é—´å¯»åˆ°é€šè·¯ï¼Œä¸è¿‡é€šå¸¸ä¹Ÿè¦èŠ±è´¹è®¸å¤šå·¥å¤«ã€‚</p>
+<p>ã€€ã€€è€Œè¾Ÿé‚ªæ˜¯å¦–æ—ä¸­å¾ˆç‰¹åˆ«çš„ä¸€æ”¯ã€‚è¶Šæ˜¯å¼ºå¤§çš„è¾Ÿé‚ªç‹æ—è¶Šæ˜¯èƒ½å¤Ÿçªç ´ç©ºé—´çš„æŸç¼šï¼Œå¯¹ä»–ä»¬è€Œè¨€ï¼Œå¤©ä¸Šå¤©ä¸‹ï¼Œå¤§å¤šåœ°æ–¹éƒ½æ˜¯å€å¿½è€Œè‡³ï¼Œå¾€æ¥æ— æ‹˜ã€‚</p>
+<p>ã€€ã€€é™¤äº†ç©ºé—´èƒ½åŠ›ï¼Œè¾Ÿé‚ªæ—æ•´ä½“çš„æˆ˜æ–—åŠ›ä¹Ÿè¶³å¤Ÿå¼ºæ‚ï¼Œä»–ä»¬æ˜¯ç«‹äºå¦–æ—é¡¶ç‚¹çš„ç”Ÿçµä¹‹ä¸€ï¼Œå¾—åˆ°ä¼—å¦–çš„æ•¬ç•ã€‚</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321113842781.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321113842781.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321113842781.jpg"><img class="" alt="" width="600" height="263" src="20180426111410166.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111410166.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯æˆªå›¾ä¹‹ä¸€</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321113926586.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321113926586.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321113926586.jpg"><img class="" alt="" width="600" height="263" src="20180426111415454.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111415454.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯æˆªå›¾ä¹‹äºŒ</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321113943173.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321113943173.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321113943173.jpg"><img class="" alt="" width="600" height="263" src="20180426111421173.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111421173.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯æˆªå›¾ä¹‹ä¸‰</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321113952485.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321113952485.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321113952485.jpg"><img class="" alt="" width="600" height="263" src="20180426111426393.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111426393.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯æˆªå›¾ä¹‹å››</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321114000755.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321114000755.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321114000755.jpg"><img class="" alt="" width="600" height="263" src="2018042611143242.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/2018042611143242.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯æˆªå›¾ä¹‹äº”</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321114010412.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321114010412.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321114010412.jpg"><img class="" alt="" width="600" height="263" src="20180426111437680.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111437680.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯æˆªå›¾ä¹‹å…­</p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321114018912.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321114018912.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321114018912.jpg"><img class="" alt="" width="600" height="263" src="20180426111443138.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111443138.jpg" /></a></p>
+<p align="center">å¤©é¹¿åŸåœºæ™¯æˆªå›¾ä¹‹ä¸ƒ</p>
+<p><br />
+ã€€ã€€ç›¸ä¼ åœ¨å¤©é¹¿åŸä¸‹æ–¹æ·±å¤„ï¼Œæœ‰ä¸€ä¸ªå¤©ç„¶å½¢æˆçš„å·¨å¤§ç©ºé—´é€šé“ï¼Œå…¶é—´å……æ–¥ç€æ¸…æµŠäºŒæ°”äº¤æ±‡è€Œäº§ç”Ÿçš„æ··æ²Œä¹‹æ°”ã€‚</p>
+<p>ã€€ã€€è¾Ÿé‚ªå½“å¹´é€‰æ‹©åœ¨æ­¤å»ºåŸï¼Œç›®çš„ä¹‹ä¸€ä¾¿æ˜¯é•‡å®ˆè¿™æ¡é€šè·¯ã€‚</p>
+<p>ã€€ã€€è™½ç„¶å¹¶ä¸æ˜¯æ‰€æœ‰çš„é­”éƒ½è§Šè§å¸¸ä¸–ï¼Œä½†é­”åŸŸæ¯”å¸¸ä¸–æ›´åŠ å¹¿å¤§ï¼Œå³ä½¿åªæœ‰ä¸‡åˆ†ä¹‹ä¸€çš„é­”ç»ç”±æ··æ²Œé€šé“è¿›å…¥ä¸‰ç•Œï¼Œä¹Ÿä¼šå¼•å‘æ¸…æµŠå¤±è¡¡ã€ç©ºé—´ç´Šä¹±ï¼Œåæœä¸å¯é¢„ä¼°ã€‚</p>
+<p><strong>ã€é‡è¦è§’è‰²ã€‘</strong></p>
+<p><strong>éœ“å•†</strong></p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321114026453.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321114026453.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321114026453.jpg"><img class="" alt="" width="499" height="700" src="20180426111448131.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111448131.jpg" /></a></p>
+<p>ã€€ã€€éœ“å•†å‡ºèº«äºè¾Ÿé‚ªç‹æ—æ—æ”¯ï¼Œå› è‡ªèº«å®¶æ—ç›¸å¯¹è€Œè¨€å¹¶ä¸ä»¥æˆ˜åŠ›è§é•¿ï¼Œæ‰€ä»¥å¥¹ç»™äºˆä¸ˆå¤«ç„æˆˆæœ€å¤§çš„è¾…åŠ©æ˜¯åœ¨æ”¿åŠ¡æ–¹é¢ã€‚ä½†è‹¥æœ‰æˆ˜äº‹ï¼Œå¥¹ä¹Ÿç»ä¸ä¼šä»…æ˜¯ä»»ç”±ä¿æŠ¤ï¼Œè¾Ÿé‚ªå…¨æ—çš†æˆ˜ï¼Œæˆ˜åœºä¹‹ä¸Šä»æ— ç•æ€¯ã€‚</p>
+<p>ã€€ã€€ç»“ç¼¡æ•°å¹´ï¼Œéœ“å•†ä¸ç„æˆˆæ©çˆ±ç”šç¬ƒï¼Œä»å½“åˆå¤©çœŸæ‡µæ‡‚çš„å°‘å¥³å·²ç»é•¿æˆä¸ºçœŸæ­£çš„ä¸‡æ°‘æ‰€å€šçš„ç‹å¦ƒã€‚</p>
+<p>ã€€ã€€å¥¹çš„æ€§æƒ…å¤–æŸ”å†…åˆšï¼Œä¸ä¹æ€ä¼æœå†³çš„ä¸€é¢ï¼Œå¯¹ä¸ˆå¤«ä¸å„¿å¥³å´æ˜¯å§‹ç»ˆå¦‚ä¸€çš„æ¸©æŸ”ã€‚</p>
+<p>ã€€ã€€ç”±äºéœ“å•†çš„å‡ºèº«åœ¨æŸäº›ç‹æ—çœ‹æ¥ä¸å¤Ÿæ˜¾èµ«ï¼Œå¥¹å’Œç„æˆˆçš„å©šäº‹å½“åˆä¾¿å—åˆ°æ¥è‡ªç‹æ—å†…éƒ¨çš„åå¯¹ã€‚ç„æˆˆåŠ›æ’ä¼—è®®å®Œå©šï¼Œè¢«å®ˆæ—§æ´¾è§†ä¸ºå˜å¤ä¹±å¸¸ä¹‹ä¸¾ã€‚ä¹Ÿå¹¸æœ‰å¤«å¦»ä¹‹é—´å½¼æ­¤æ”¯æŒï¼Œè¿™äº›å¹´æ¥ä»æœªç›¸è´Ÿã€‚</p>
+<p><strong>ç¾½æ—</strong></p>
+<p align="center"><a target="_blank" href="javascript:if(confirm('http://i0.gbimg.cn/2018/03/21/20180321114036399.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://i0.gbimg.cn/2018/03/21/20180321114036399.jpg'" tppabs="http://i0.gbimg.cn/2018/03/21/20180321114036399.jpg"><img class="" alt="" width="451" height="700" src="20180426111453898.jpg" tppabs="http://i0.gbimg.cn/2018/04/26/20180426111453898.jpg" /></a></p>
+<p>ã€€ã€€ç¾½æ—æ˜¯ç„æˆˆæ‰€å€šé‡çš„è¾Ÿé‚ªç‹æ—æˆ˜å£«ä¹‹ä¸€ã€‚å’Œæ¡€éªœçš„å²šç›¸ä¸åŒï¼Œä»–åœ¨æˆ˜æ–—ä¹‹å¤–æ€§æ ¼ç§°å¾—ä¸Šæ¸©å’Œï¼Œç”šè‡³æœ‰äº›æ•£æ¼«éšæ€§ï¼Œæ ·è²Œçœ‹èµ·æ¥è™½ç„¶ç²—çŠ·ï¼Œå®é™…ä¸Šå´å¿ƒç»†å¦‚å‘ï¼Œä¹Ÿå› æ­¤ä»–æ—¶å¸¸è¢«ç„æˆˆäº¤ä»˜ä¸€äº›éœ€è¦å°å¿ƒè°¨æ…åˆä¸ä¹æˆ˜åŠ›çš„ä»»åŠ¡ã€‚</p>
+<p>ã€€ã€€è¦è®ºå¤©é¹¿åŸä¸­æœ‰å¼‚æ€§ç¼˜çš„ç”·æ€§ï¼Œç¾½æ—çš„æ’åå¤§æ¦‚å¯ä»¥å¾ˆé å‰ï¼Œæ€§æ ¼æ¸©æŸ”åˆä¸å‘†æ¿ï¼Œè®©ä»–å¾ˆèƒ½è®¨å¾—å¥³å­©å­çš„æ¬¢å¿ƒï¼Œä»–è‡ªå·±ä¹Ÿæ˜¯ä¹åœ¨å…¶ä¸­ã€‚</p>
+<p>æ›´å¤šç²¾å½©èµ„è®¯è¿˜è¯·å…³æ³¨ä¸‹åˆ—å®˜æ–¹å¹³å°ã€‚</p>
+<p>ã€Šå¤å‰‘å¥‡è°­ä¸‰ã€‹å®˜æ–¹å¾®åšï¼š<a target="_blank" href="javascript:if(confirm('https://weibo.com/u/6394134151  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://weibo.com/u/6394134151'" tppabs="https://weibo.com/u/6394134151">https://weibo.com/u/6394134151</a></p>
+<p align="center"><img style="height: 200px; width: 200px" alt="" src="20180313144724726.jpg" tppabs="http://i0.gbimg.cn/2018/03/13/20180313144724726.jpg" /></p>
+<p align="center">æ‰«ç å…³æ³¨&ldquo;å¤å‰‘å¥‡è°­ä¸‰&rdquo;å®˜æ–¹å¾®ä¿¡</p></p>
+<div class="bdsharebuttonbox"><span style="float:left;line-height: 26px;margin-right: 10px;">åˆ†äº«åˆ°:</span><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="åˆ†äº«åˆ°æ–°æµªå¾®åš"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="åˆ†äº«åˆ°è…¾è®¯å¾®åš"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="åˆ†äº«åˆ°QQç©ºé—´"></a><a href="#" class="bds_renren" data-cmd="renren" title="åˆ†äº«åˆ°äººäººç½‘"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="åˆ†äº«åˆ°å¾®ä¿¡"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="åˆ†äº«åˆ°ç™¾åº¦è´´å§"></a><a href="#" class="bds_copy" data-cmd="copy" title="åˆ†äº«åˆ°å¤åˆ¶ç½‘å€"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+        </div>
+    </div>
+</div>
+
+
+<section class="m-foot">
+        <div class="footlogo">
+            <img src="logo-1.png" tppabs="http://i1.gbimg.cn/zt/2018/04/20/gjqt3x2018y20m/myc36x/imagesm/logo.png" class="footimg1">
+            <img src="left_logozl.png" tppabs="http://i1.gbimg.cn/zt/2018/04/20/gjqt3x2018y20m/myc36x/imagesm/left_logozl.png" class="footimg2">
+        </div>
+        <div class="footcont">
+            <div class="ffirst">
+                <span>æŠµåˆ¶ä¸è‰¯æ¸¸æˆ</span>
+                <span>æ‹’ç»ç›—ç‰ˆæ¸¸æˆ</span>
+                <span>æ³¨æ„è‡ªæˆ‘ä¿æŠ¤</span>
+                <span>è°¨é˜²å—éª—ä¸Šå½“</span>               
+            </div>
+            <p class="ffirst">
+                <span>é€‚åº¦æ¸¸æˆç›Šè„‘</span>
+                <span>æ²‰è¿·æ¸¸æˆä¼¤èº«</span>
+                <span>åˆç†å®‰æ’æ—¶é—´</span>
+                <span>äº«å—å¥åº·ç”Ÿæ´»</span>
+            </p>
+            <p class="ffirst">
+                <span>ç»è¥æ€§ICPï¼šäº¬ICPè¯090571å·</span>
+                <span>äº¬å…¬ç½‘å®‰å¤‡11010502035187å·</span>               
+            </p>
+            <p class="ffirst">
+                <span>ç½‘å…ƒåœ£å”</span>
+                <span>ç‰ˆæƒæ‰€æœ‰</span>               
+            </p>
+        </div>
+    </section><!--m-foot-->
+
+<!--è¿”å›æŒ‰é’®-->
+<a id="return-top" class="backbtn" href="javascript:scrollTo(0,0);"></a>
+<script src="jquery.js" tppabs="http://gjqt.wangyuan.com/Label/2014/02/20/jquery.js"></script>
+<iframe src="footerPublic.html" tppabs="http://gjqt3.wangyuan.com/footerPublic.html" frameborder="0" scrolling="no" allowtransparency="true" width="100%" height="123px" class="pcfoot"></iframe>
+<script src="common_nav_v4-1.js" tppabs="http://www.wangyuan.com/scripts/common_nav_v4.js" id="_common_nav_script_" game="gjqt3"></script>
+<script src="main-1.js" tppabs="http://gjqt3.wangyuan.com/dist/201804/js/main.js"></script>
+<script src="content.js" tppabs="http://gjqt3.wangyuan.com/dist/201804/js/content.js"></script>
+<script src="sf_utf_8.js" tppabs="http://sf.wangyuan.com/sf_utf_8.js" type="text/javascript" id="GBSF" GID="GJQT3.XW"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "hm.js-f8a890c5f8248fb09521aec5cf3922a8"/*tpa=https://hm.baidu.com/hm.js?f8a890c5f8248fb09521aec5cf3922a8*/;
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

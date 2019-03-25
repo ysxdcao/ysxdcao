@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div>
+    <input type="text" autofocus><button>添加</button>
+    <ul>
+        <li>睡觉</li>
+    </ul>
+</div>
+<template id="liebiao">
+    <li>{{i}}|{{words}}</li>
+</template>
+<script>
+    var li={
+        template:"#liebiao",
+        props:["i","words"]
+    }
+</script>
+<template id="lieul">
+    <ul>
+       <zjli v-for="(i,words) of tas" :i="i" :words="words"></zjli>
+    </ul>
+</template>
+<script>
+    var ul={
+        template:"#lieul",
+        components:{zjli:li},
+        props:[tas]
+    }
+</script>
+</body>
+</html>

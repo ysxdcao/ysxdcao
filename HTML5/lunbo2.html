@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            position: absolute;
+            left:500px;
+            top:400px;
+        }
+        div>ul>li{
+            float: left;
+        }
+        div{
+            position: relative;
+        }
+        div>img{
+            position: absolute;
+            z-index: 0;
+        }
+        div>ul>li>a{
+          display: block; 
+          width: 10px;height: 10px;
+          border:1px solid red;
+          border-radius: 50%;
+          margin-right: 12px;
+        }
+        .show1{
+            z-index: 1;
+        }
+        .show2{
+            background: #13f21a;
+        }
+    </style>
+</head>
+<body onload="dsq()">
+    <div>
+        <img src="img/banner1.png" alt="">
+        <img src="img/banner2.png" alt="">
+        <img src="img/banner3.png" alt="">
+        <ul onmouseover="yuand2()">
+            <li><a href="javascript:;"></a></li>
+            <li><a href="javascript:;"></a></li>
+            <li><a href="javascript:;"></a></li>
+        </ul>
+    </div>
+   <script>
+       var b;var i=0;
+       var img1=document.querySelectorAll("div>img");
+       var a1=document.querySelectorAll(" div>ul>li>a")
+       var u1=document.querySelector("div>ul");
+    //控制函数
+       function control(i){
+         return new Promise(function(open){
+            for(elem of img1){
+             elem.removeAttribute("class");
+            }
+            img1[i].setAttribute("class","show1");
+            open();
+         })
+    //定时器
+       }
+       function dsq(){
+           return new Promise(function(open){
+            a1[i].setAttribute("class","show2");
+            img1[i].setAttribute("class","show1");
+             b=setInterval(function(){
+             i++;
+             if(i==3) i=0;
+             control(i);
+             yuand(i);
+             },2000)
+           })
+           open();
+       }
+     //圆点背景变换函数
+       function yuand(i){
+           for(elem of a1){
+             elem.removeAttribute("class");
+           }
+           a1[i].setAttribute("class","show2");
+       }
+     //圆点控制函数
+     function yuand2(){
+         a1.forEach(function(elem,j){
+             elem.onmouseover=function(){
+               i=j;
+               clearInterval(b);
+               yuand(j);
+               control(j).then(dsq);
+             }
+         })
+     }
+   </script>
+</body>
+</html>
